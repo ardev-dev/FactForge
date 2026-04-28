@@ -1,13 +1,884 @@
 {
-  "last_updated": null,
-  "videos": [],
+  "last_fetched": "2026-04-28T05:21:59Z",
+  "total_videos_analyzed": 43,
   "channel_totals": {
-    "total_views": 0,
-    "total_subscribers": 0,
-    "total_videos": 0
+    "total_views": 45,
+    "total_subs_gained": 0
   },
-  "performance_by_category": {},
-  "performance_by_format": {},
-  "best_title_formulas": [],
-  "best_publish_times": []
+  "videos": [
+    {
+      "id": "L00100",
+      "youtube_id": "EhMCQu_v0vA",
+      "title": "Richest People on Earth — From Least to Most Wealthy (2026)",
+      "type": "long",
+      "publish_at": "2026-04-14T15:00:00+00:00",
+      "stats": {
+        "views": 3,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 1,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 53
+    },
+    {
+      "id": "S01117",
+      "youtube_id": "zszJueVARa0",
+      "title": "36 Politicians Voted for a Law. None of Them Wrote It.",
+      "type": "short",
+      "publish_at": "2026-04-14T00:00:00+00:00",
+      "stats": {
+        "views": 2,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 1,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 35
+    },
+    {
+      "id": "S01279",
+      "youtube_id": "Tz0q5gw2PgE",
+      "title": "A Scientist Edited Babies' DNA. The Edits Failed. They Can't Be Undone.",
+      "type": "short",
+      "publish_at": "2026-04-17T14:00:00+00:00",
+      "stats": {
+        "views": 2,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 35
+    },
+    {
+      "id": "S01062",
+      "youtube_id": "ytUZK6OCcUs",
+      "title": "EpiPen: $7 to Make. $608 to Buy.",
+      "type": "short",
+      "publish_at": "2026-04-15T14:00:00+00:00",
+      "stats": {
+        "views": 1,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 1,
+        "comments": 1,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 29
+    },
+    {
+      "id": "S01110",
+      "youtube_id": "Ug_FODe7wXs",
+      "title": "University Costs $300 in Germany. $108,000 in the US.",
+      "type": "short",
+      "publish_at": "2026-04-19T14:00:00+00:00",
+      "stats": {
+        "views": 5,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 88
+    },
+    {
+      "id": "S01155",
+      "youtube_id": "HtPOpOc380s",
+      "title": "Africa's Largest Dam — Built With Workers' Salaries",
+      "type": "short",
+      "publish_at": "2026-04-23T14:00:00+00:00",
+      "stats": {
+        "views": 0,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 0
+    },
+    {
+      "id": "S01183",
+      "youtube_id": "yGaVthXWVFI",
+      "title": "A $1 Pill That Cures Hepatitis C — Sold for $84,000",
+      "type": "short",
+      "publish_at": "2026-04-25T14:00:00+00:00",
+      "stats": {
+        "views": 0,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 0
+    },
+    {
+      "id": "S01185",
+      "youtube_id": "Ye-bsuxkbdE",
+      "title": "Your Face Is in a Database of 40 Billion Photos",
+      "type": "short",
+      "publish_at": "2026-04-27T14:00:00+00:00",
+      "stats": {
+        "views": 0,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 0
+    },
+    {
+      "id": "S01190",
+      "youtube_id": "HWTnCpFuzvM",
+      "title": "OpenAI Is Being Sued for $9.9 Trillion",
+      "type": "short",
+      "publish_at": "2026-04-29T14:00:00+00:00",
+      "stats": {
+        "views": 0,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 0
+    },
+    {
+      "id": "S01215",
+      "youtube_id": "2IsTK_N2NWM",
+      "title": "The CIA Spied on 120 Countries for 50 Years — Through a Swiss Company",
+      "type": "short",
+      "publish_at": "2026-05-01T14:00:00+00:00",
+      "stats": {
+        "views": 0,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 0
+    },
+    {
+      "id": "S01224",
+      "youtube_id": "Pm8QbZLQfu0",
+      "title": "American Prisoners Earn $0.23 an Hour — For the US Military",
+      "type": "short",
+      "publish_at": "2026-05-03T14:00:00+00:00",
+      "stats": {
+        "views": 0,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 0
+    },
+    {
+      "id": "S01267",
+      "youtube_id": "pBaPrFoRiJY",
+      "title": "Building AGI Will Cost More Than the GDP of Most Countries",
+      "type": "short",
+      "publish_at": "2026-05-05T14:00:00+00:00",
+      "stats": {
+        "views": 0,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 0
+    },
+    {
+      "id": "S01268",
+      "youtube_id": "4HYwD9YZPcY",
+      "title": "This Movie Was Made Entirely by AI — And It's Playing in 58 Cinemas",
+      "type": "short",
+      "publish_at": "2026-05-07T14:00:00+00:00",
+      "stats": {
+        "views": 0,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 0
+    },
+    {
+      "id": "L00016",
+      "youtube_id": "mlYuvKBbuOA",
+      "title": "The Wealth Gap: How the Richest 1% Came to Own More Than the Bottom 50% Combined",
+      "type": "long",
+      "publish_at": "2026-04-21T14:00:00+00:00",
+      "stats": {
+        "views": 1,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 18
+    },
+    {
+      "id": "S00794",
+      "youtube_id": "W7RktSb5-SE",
+      "title": "The Race to Build an AGI — Who Is Winning and What Happens When They Do",
+      "type": "short",
+      "publish_at": "2026-05-09T14:00:00+00:00",
+      "stats": {
+        "views": 0,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 0
+    },
+    {
+      "id": "S00925",
+      "youtube_id": "jTP-Dg0PTS4",
+      "title": "The Oil Companies That Knew About Climate Change in 1977",
+      "type": "short",
+      "publish_at": "2026-05-11T14:00:00+00:00",
+      "stats": {
+        "views": 0,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 0
+    },
+    {
+      "id": "S01066",
+      "youtube_id": "Xxlvx_xwl-U",
+      "title": "How El Salvador's Homicide Rate Dropped 95% in Two Years",
+      "type": "short",
+      "publish_at": "2026-05-13T14:00:00+00:00",
+      "stats": {
+        "views": 0,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 0
+    },
+    {
+      "id": "S01080",
+      "youtube_id": "nciYMigKvoY",
+      "title": "The AI That Can Clone Your Voice in 3 Seconds",
+      "type": "short",
+      "publish_at": "2026-05-15T14:00:00+00:00",
+      "stats": {
+        "views": 0,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 0
+    },
+    {
+      "id": "S01084",
+      "youtube_id": "GrD4zO06bs4",
+      "title": "The $40 Aspirin: How Hospital Billing Became Legalized Robbery",
+      "type": "short",
+      "publish_at": "2026-05-17T14:00:00+00:00",
+      "stats": {
+        "views": 0,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 0
+    },
+    {
+      "id": "S01097",
+      "youtube_id": "HbX6-LdWlsM",
+      "title": "Quantum Computing Will Break All Encryption Within 10 Years",
+      "type": "short",
+      "publish_at": "2026-05-19T14:00:00+00:00",
+      "stats": {
+        "views": 0,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 0
+    },
+    {
+      "id": "S01113",
+      "youtube_id": "SrTJAzfHOQw",
+      "title": "The Poisoning That Killed a City: Flint Michigan's Water Crisis",
+      "type": "short",
+      "publish_at": "2026-05-21T14:00:00+00:00",
+      "stats": {
+        "views": 0,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 0
+    },
+    {
+      "id": "S01128",
+      "youtube_id": "nGi2MQRDvm0",
+      "title": "Stuxnet: The Cyberweapon That Physically Destroyed Nuclear Centrifuges",
+      "type": "short",
+      "publish_at": "2026-05-23T14:00:00+00:00",
+      "stats": {
+        "views": 0,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 0
+    },
+    {
+      "id": "S01131",
+      "youtube_id": "G1giJ7SQvp4",
+      "title": "The AI That Generates Fake Scientific Papers",
+      "type": "short",
+      "publish_at": "2026-05-25T14:00:00+00:00",
+      "stats": {
+        "views": 0,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 0
+    },
+    {
+      "id": "S01644",
+      "youtube_id": "xnzKoXnRnoQ",
+      "title": "Mansa Musa's Pilgrimage: The Day an African King Broke the Global Economy",
+      "type": "short",
+      "publish_at": "2026-05-27T14:00:00+00:00",
+      "stats": {
+        "views": 1,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 1,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 29
+    },
+    {
+      "id": "L00200",
+      "youtube_id": "Nt_xKruntQk",
+      "title": "800 Years of Forgotten Genius: How Muslim Scientists Built the Modern World",
+      "type": "long",
+      "publish_at": "2026-04-28T14:00:00Z",
+      "stats": {
+        "views": 3,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 53
+    },
+    {
+      "id": "S01220",
+      "youtube_id": "z8VOXORHURo",
+      "title": "He Transferred $25 Million to Criminals — Because of a Fake Video Call",
+      "type": "short",
+      "publish_at": "2026-05-29T14:00:00Z",
+      "stats": {
+        "views": 3,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 1,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": "A",
+      "performance_score": 65
+    },
+    {
+      "id": "S00550",
+      "youtube_id": "74I69vfNj4c",
+      "title": "S00550",
+      "type": "short",
+      "publish_at": "2026-05-31T14:00:00Z",
+      "stats": {
+        "views": 4,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 1,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": "B",
+      "performance_score": 82
+    },
+    {
+      "id": "L00300",
+      "youtube_id": "VMTGuDE9uHI",
+      "title": "From Shells to Bitcoin: The Shocking History of Money",
+      "type": "long",
+      "publish_at": "2026-05-05T14:00:00Z",
+      "stats": {
+        "views": 1,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 18
+    },
+    {
+      "id": "S01700",
+      "youtube_id": "9o4vjzWw2dI",
+      "title": "We Know More About Mars Than Our Own Ocean Floor",
+      "type": "short",
+      "publish_at": "2026-06-02T14:00:00Z",
+      "stats": {
+        "views": 5,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 1,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 100
+    },
+    {
+      "id": "S01800",
+      "youtube_id": "eoB0zitZlzU",
+      "title": "You Spend 26 Years of Your Life Unconscious",
+      "type": "short",
+      "publish_at": "2026-06-04T14:00:00Z",
+      "stats": {
+        "views": 3,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 53
+    },
+    {
+      "id": "L00400",
+      "youtube_id": "xLSI34s_3nk",
+      "title": "The Ocean Floor: Why 80% of Our Planet Remains Completely Unknown",
+      "type": "long",
+      "publish_at": "2026-05-12T14:00:00Z",
+      "stats": {
+        "views": 2,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 1,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 47
+    },
+    {
+      "id": "S01900",
+      "youtube_id": "y7dE8o-5nsU",
+      "title": "A Single Ant Colony Spans 6,000 Kilometers — And Has No Leader",
+      "type": "short",
+      "publish_at": "2026-06-06T14:00:00Z",
+      "stats": {
+        "views": 2,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 1,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 47
+    },
+    {
+      "id": "S02000",
+      "youtube_id": "MKiElxZ1IEU",
+      "title": "Your Voice Is Already Stolen — You Just Don't Know It Yet",
+      "type": "short",
+      "publish_at": "2026-06-08T14:00:00Z",
+      "stats": {
+        "views": 0,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 0
+    },
+    {
+      "id": "S02100",
+      "youtube_id": "AkBPRnAsNsw",
+      "title": "Loneliness Now Kills More People Than Obesity — And Tech Companies Know It",
+      "type": "short",
+      "publish_at": "2026-06-10T14:00:00Z",
+      "stats": {
+        "views": 1,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 18
+    },
+    {
+      "id": "S02200",
+      "youtube_id": "NsMM8kIbyXo",
+      "title": "In 1995 There Were 365 Billionaires. Today: 3,000. Here Is Where the Money Went.",
+      "type": "short",
+      "publish_at": "2026-06-12T14:00:00Z",
+      "stats": {
+        "views": 2,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 35
+    },
+    {
+      "id": "S02300",
+      "youtube_id": "D887XGQWIsk",
+      "title": "Your Resume Was Rejected by an AI — No Human Ever Read It",
+      "type": "short",
+      "publish_at": "2026-06-14T14:00:00Z",
+      "stats": {
+        "views": 1,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 18
+    },
+    {
+      "id": "L00500",
+      "youtube_id": "4Df3SrQTbN4",
+      "title": "The Sleep Industry: How a $585 Billion Business Profits From Your Exhaustion",
+      "type": "long",
+      "publish_at": "2026-05-19T14:00:00Z",
+      "stats": {
+        "views": 0,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 0
+    },
+    {
+      "id": "S02400",
+      "youtube_id": "slA6RrCdhI8",
+      "title": "There Is Plastic Inside Your Heart Right Now",
+      "type": "short",
+      "publish_at": "2026-06-22T14:00:00Z",
+      "stats": {
+        "views": 1,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 18
+    },
+    {
+      "id": "S02500",
+      "youtube_id": "fbyb2C2RvWg",
+      "title": "Nestlé Paid $524 to Take 27 Million Gallons of Your Water",
+      "type": "short",
+      "publish_at": "2026-06-18T14:00:00Z",
+      "stats": {
+        "views": 1,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 18
+    },
+    {
+      "id": "S02600",
+      "youtube_id": "IopufVL9IT8",
+      "title": "The Last Antibiotic Is Failing — And Nobody Is Making a New One",
+      "type": "short",
+      "publish_at": "2026-06-20T14:00:00Z",
+      "stats": {
+        "views": 1,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 18
+    },
+    {
+      "id": "S02700",
+      "youtube_id": "acKeFjjb5Gs",
+      "title": "Harvard Scientists Were Paid to Blame Fat — Not Sugar — For Heart Disease",
+      "type": "short",
+      "publish_at": "2026-06-24T14:00:00Z",
+      "stats": {
+        "views": 0,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 0
+    },
+    {
+      "id": "S02800",
+      "youtube_id": "tKdoXVT6Ubg",
+      "title": "Your Gut Makes 95% of Your Serotonin — Not Your Brain",
+      "type": "short",
+      "publish_at": "2026-06-26T14:00:00Z",
+      "stats": {
+        "views": 0,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 0
+    },
+    {
+      "id": "S02900",
+      "youtube_id": "74FlmXBbueg",
+      "title": "NVIDIA Was Almost Bankrupt. Now It's Worth More Than Germany's Entire Economy.",
+      "type": "short",
+      "publish_at": "2026-06-28T14:00:00Z",
+      "stats": {
+        "views": 0,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 0
+    }
+  ],
+  "top_performer": {
+    "id": "S01700",
+    "score": 100
+  },
+  "worst_performer": {
+    "id": "S02900",
+    "score": 0
+  },
+  "recommendations": [
+    "Hook formula B outperforms A by 33% — prioritize formula B",
+    "43 video(s) below 40% retention — consider stronger hooks",
+    "Shorts average 0% retention — below YouTube average (60%)"
+  ],
+  "title_rotations": []
 }

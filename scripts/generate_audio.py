@@ -14,10 +14,19 @@ Voice: am_echo (American male, Kokoro v1.0)
 Model files: models/kokoro/kokoro-v1.0.onnx + voices-v1.0.bin
 """
 
-import json, sys, shutil, argparse, logging
+import os, json, sys, shutil, argparse, logging
 from pathlib import Path
 import soundfile as sf
 import numpy as np
+
+# Fix espeak-ng path for kokoro_onnx/phonemizer on macOS
+os.environ["PHONEMIZER_ESPEAK_PATH"] = "/opt/homebrew/bin/espeak-ng"
+os.environ["PHONEMIZER_ESPEAK_LIBRARY"] = "/opt/homebrew/lib/libespeak-ng.dylib"
+try:
+    import espeakng_loader
+    os.environ["ESPEAK_DATA_PATH"] = espeakng_loader.get_data_path()
+except ImportError:
+    pass
 import requests
 
 logger = logging.getLogger(__name__)
@@ -26,7 +35,7 @@ BASE = Path(__file__).parent.parent
 
 # ── Kokoro config ─────────────────────────────────────────────────────────────
 KOKORO_MODEL  = BASE / "models/kokoro/kokoro-v1.0.onnx"
-KOKORO_VOICES = BASE / "models/kokoro/voices-v1.0.bin"
+KOKORO_VOICES = BASE / "models/kokoro/voices.json"
 KOKORO_VOICE  = "am_echo"    # chosen voice — clear, authoritative, commercial safe
 KOKORO_SPEED  = 1.08         # slightly faster for Shorts energy (1.0 = normal)
 

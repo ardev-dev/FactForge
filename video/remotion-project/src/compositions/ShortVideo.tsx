@@ -36,6 +36,7 @@ export const segmentSchema = z.object({
   endFrame: z.number(),
   // visual treatment
   type: z.enum([
+    "flash",      // rapid-cut intro shot — bg only, no captions
     "hook",       // opening line — massive, accent
     "fact",       // normal fact sentence
     "impact",     // level-3 shock — punch + flash
@@ -136,6 +137,22 @@ const SegmentView: React.FC<SegmentViewProps> = ({ seg, accentColor, globalBgGra
   ) : (
     <AbsoluteFill style={{ background: globalBgGradient }} />
   );
+
+  // ── FLASH: rapid-cut intro shot — full-bleed bg, slight scale punch, no caption ──
+  if (seg.type === "flash") {
+    const punch = interpolate(frame, [0, Math.min(8, segDuration)], [1.05, 1.0], {
+      extrapolateRight: "clamp",
+    });
+    return (
+      <AbsoluteFill>
+        <div style={{ transform: `scale(${punch})`, width: "100%", height: "100%" }}>
+          {bg}
+        </div>
+        {/* brief tint flash on entry to add energy */}
+        <ImpactFlash accentColor={accentColor} flashDurationFrames={4} />
+      </AbsoluteFill>
+    );
+  }
 
   // ── IMPACT: subtle flash effect only (no text) ────────────────────────────
   if (seg.type === "impact") {

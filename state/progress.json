@@ -1,37 +1,21 @@
 {
-  "current_id": "L00016",
-  "current_title": "The Wealth Gap",
-  "phase": "awaiting_upload",
-  "steps": {
-    "research": "done",
-    "script": "done",
-    "audio": "done",
-    "video": "done",
-    "thumbnail": "done",
-    "metadata": "done",
-    "subtitles_7_languages": "done",
-    "publish": "blocked_uploadLimitExceeded",
-    "youtube_id": null
-  },
-  "pending_upload_ids": [
-    "L00100",
-    "S01117",
-    "S01279",
-    "S01062",
-    "S01110",
-    "S01155",
-    "S01183",
-    "S01185",
-    "S01190",
-    "S01215",
-    "S01224",
-    "S01267",
-    "S01268",
-    "L00016"
-  ],
-  "next_action": "Upload 13 pending videos after YouTube quota resets",
-  "queue_position": 3,
+  "current_id": null,
+  "current_title": null,
+  "phase": "idle",
+  "steps": {},
+  "pending_upload_ids": [],
+  "scheduled_count": 41,
+  "uploaded_count": 2,
+  "next_action": "Ready for next 'produce' command — all videos scheduled",
+  "queue_position": 43,
   "phase_2_database": true,
   "short_ideas_total": 1800,
-  "long_ideas_total": 150
+  "long_ideas_total": 150,
+  "last_synced": "2026-04-28T05:20:27Z",
+  "last_produced": {
+    "id": "S02900",
+    "title": "NVIDIA Was Almost Bankrupt. Now It's Worth More Than Germany's Entire Economy.",
+    "youtube_id": "74FlmXBbueg",
+    "publish_at": "2026-06-28T14:00:00Z"
+  }
 }

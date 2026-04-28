@@ -395,15 +395,6 @@
       "scheduled": true
     },
     {
-      "id": "L00400",
-      "title": "The Ocean Floor: Why 80% of Our Planet Remains Completely Unknown",
-      "youtube_id": "xLSI34s_3nk",
-      "status": "scheduled",
-      "publish_at": "2026-05-12T14:00:00Z",
-      "type": "long",
-      "scheduled": true
-    },
-    {
       "id": "S01900",
       "title": "A Single Ant Colony Spans 6,000 Kilometers — And Has No Leader",
       "youtube_id": "y7dE8o-5nsU",
@@ -418,6 +409,104 @@
       "youtube_id": "MKiElxZ1IEU",
       "status": "scheduled",
       "publish_at": "2026-06-08T14:00:00Z",
+      "type": "short",
+      "scheduled": true
+    },
+    {
+      "id": "S02100",
+      "title": "Loneliness Now Kills More People Than Obesity — And Tech Companies Know It",
+      "youtube_id": "AkBPRnAsNsw",
+      "status": "scheduled",
+      "publish_at": "2026-06-10T14:00:00Z",
+      "type": "short",
+      "scheduled": true
+    },
+    {
+      "id": "S02200",
+      "title": "In 1995 There Were 365 Billionaires. Today: 3,000. Here Is Where the Money Went.",
+      "youtube_id": "NsMM8kIbyXo",
+      "status": "scheduled",
+      "publish_at": "2026-06-12T14:00:00Z",
+      "type": "short",
+      "scheduled": true
+    },
+    {
+      "id": "S02300",
+      "title": "Your Resume Was Rejected by an AI — No Human Ever Read It",
+      "youtube_id": "D887XGQWIsk",
+      "status": "scheduled",
+      "publish_at": "2026-06-14T14:00:00Z",
+      "type": "short",
+      "scheduled": true
+    },
+    {
+      "id": "L00500",
+      "title": "The Sleep Industry: How a $585 Billion Business Profits From Your Exhaustion",
+      "youtube_id": "4Df3SrQTbN4",
+      "status": "scheduled",
+      "publish_at": "2026-05-19T14:00:00Z",
+      "type": "long",
+      "scheduled": true
+    },
+    {
+      "id": "S02400",
+      "title": "There Is Plastic Inside Your Heart Right Now",
+      "status": "scheduled",
+      "publish_at": "2026-06-22T14:00:00Z",
+      "type": "short",
+      "scheduled": true,
+      "notes": "Old video (1i5q0q48hbc) has no audio — must delete and re-upload. video.mp4 is fixed.",
+      "old_youtube_id": "1i5q0q48hbc",
+      "youtube_id": "slA6RrCdhI8"
+    },
+    {
+      "id": "S02500",
+      "title": "Nestlé Paid $524 to Take 27 Million Gallons of Your Water",
+      "video_file": "output/S02500/video.mp4",
+      "metadata_file": "output/S02500/metadata.json",
+      "ready": true,
+      "status": "scheduled",
+      "type": "short",
+      "youtube_id": "fbyb2C2RvWg",
+      "publish_at": "2026-06-18T14:00:00Z",
+      "scheduled": true
+    },
+    {
+      "id": "S02600",
+      "title": "The Last Antibiotic Is Failing — And Nobody Is Making a New One",
+      "video_file": "output/S02600/video.mp4",
+      "metadata_file": "output/S02600/metadata.json",
+      "ready": true,
+      "status": "scheduled",
+      "type": "short",
+      "youtube_id": "IopufVL9IT8",
+      "publish_at": "2026-06-20T14:00:00Z",
+      "scheduled": true
+    },
+    {
+      "id": "S02700",
+      "title": "Harvard Scientists Were Paid to Blame Fat — Not Sugar — For Heart Disease",
+      "youtube_id": "acKeFjjb5Gs",
+      "status": "scheduled",
+      "publish_at": "2026-06-24T14:00:00Z",
+      "type": "short",
+      "scheduled": true
+    },
+    {
+      "id": "S02800",
+      "title": "Your Gut Makes 95% of Your Serotonin — Not Your Brain",
+      "youtube_id": "tKdoXVT6Ubg",
+      "status": "scheduled",
+      "publish_at": "2026-06-26T14:00:00Z",
+      "type": "short",
+      "scheduled": true
+    },
+    {
+      "id": "S02900",
+      "title": "NVIDIA Was Almost Bankrupt. Now It's Worth More Than Germany's Entire Economy.",
+      "youtube_id": "74FlmXBbueg",
+      "status": "scheduled",
+      "publish_at": "2026-06-28T14:00:00Z",
       "type": "short",
       "scheduled": true
     }

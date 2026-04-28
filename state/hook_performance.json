@@ -1,15 +1,18 @@
 {
   "hook_stats": {
-    "A": {"videos": 0, "avg_views": 0, "avg_retention_pct": 0, "avg_ctr": 0},
-    "B": {"videos": 0, "avg_views": 0, "avg_retention_pct": 0, "avg_ctr": 0},
-    "C": {"videos": 0, "avg_views": 0, "avg_retention_pct": 0, "avg_ctr": 0},
-    "D": {"videos": 0, "avg_views": 0, "avg_retention_pct": 0, "avg_ctr": 0},
-    "E": {"videos": 0, "avg_views": 0, "avg_retention_pct": 0, "avg_ctr": 0},
-    "F": {"videos": 0, "avg_views": 0, "avg_retention_pct": 0, "avg_ctr": 0}
+    "A": {
+      "videos": 1,
+      "avg_views": 3,
+      "avg_retention_pct": 0.0,
+      "avg_ctr": 0.0
+    },
+    "B": {
+      "videos": 1,
+      "avg_views": 4,
+      "avg_retention_pct": 0.0,
+      "avg_ctr": 0.0
+    }
   },
-  "best_formula": null,
-  "worst_formula": null,
-  "title_rotations": [],
-  "last_updated": null,
-  "_notes": "Updated by scripts/analytics_report.py after each analytics fetch. Use best_formula when choosing hook in write_script.md."
+  "best_formula": "B",
+  "last_updated": "2026-04-28"
 }

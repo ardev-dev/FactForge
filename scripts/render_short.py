@@ -37,7 +37,7 @@ def render(video_id: str):
         "--codec=h264",
         "--crf=18",
         "--pixel-format=yuv420p",
-        "--concurrency=2",
+        "--concurrency=1",
     ]
 
     result = subprocess.run(render_cmd, cwd=REMOTION_DIR, capture_output=False, timeout=1800)
