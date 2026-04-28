@@ -412,7 +412,12 @@ Tier 1 — BGM:    ambient_documentary.mp3 at 8% volume (Kevin MacLeod CC BY 4.0
 Tier 2 — SFX:    context-matched, max 5 events/40s, min 3s gap between events
                  During flash intro (frames 0-180): SFX swell MANDATORY (tension_build at 40% volume)
                  NEVER leave the flash intro silent — it's a dead patch viewers exit.
-Tier 3 — Ambient: (future) topic-specific ambient bed
+Tier 3 — Ambient: scene-aware foley layer (Hollywood-style, MANDATORY)
+                 Built from 18 synthesized loops in audio_engineering/assets/ambient/
+                 Mapped via scripts/scene_ambient.py: rain→rain.wav, walking→footsteps,
+                 hospital→cardiac beeps, factory→industrial hum, courtroom→murmur, etc.
+                 Each segment gets its OWN ambient at -28 dB with 250ms crossfade.
+                 RULE: every visible action must have audible texture (foley).
 ```
 
 **Audio continuity rule (NON-NEGOTIABLE):**

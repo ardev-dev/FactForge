@@ -221,12 +221,17 @@ def step_render(vid):
 
 
 def step_audio_repair(vid):
-    step("[7/9] Audio repair — BGM bed + intro SFX swell")
+    step("[7/10] Audio repair — BGM bed + intro SFX swell")
     run([sys.executable, str(ROOT / "scripts/audio_repair.py"), vid])
 
 
+def step_scene_ambient(vid):
+    step("[8/10] Scene-aware ambient foley layer (Hollywood-style)")
+    run([sys.executable, str(ROOT / "scripts/scene_ambient.py"), vid])
+
+
 def step_lufs(vid):
-    step("[8/9] LUFS normalize to -14 (YouTube broadcast standard)")
+    step("[9/10] LUFS normalize to -14 (YouTube broadcast standard)")
     src = ROOT / "output" / vid / "video.mp4"
     tmp = ROOT / "output" / vid / "video_norm.mp4"
     subprocess.run([
@@ -240,7 +245,7 @@ def step_lufs(vid):
 
 
 def step_qc(vid):
-    step("[9/9] Audio QC gate")
+    step("[10/10] Audio QC gate")
     r = subprocess.run([sys.executable, str(ROOT / "scripts/audio_qc.py"), vid])
     if r.returncode != 0:
         raise RuntimeError(f"QC FAILED for {vid} — fix before upload")
@@ -268,6 +273,7 @@ def main():
     step_copy_public(vid)
     step_render(vid)
     step_audio_repair(vid)
+    step_scene_ambient(vid)
     step_lufs(vid)
     step_qc(vid)
 
