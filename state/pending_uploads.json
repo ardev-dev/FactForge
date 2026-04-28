@@ -44,7 +44,9 @@
       "scheduled": true,
       "youtube_id": "Tz0q5gw2PgE",
       "publish_at": "2026-04-17T14:00:00+00:00",
-      "status": "scheduled"
+      "status": "uploaded",
+      "privacy_status": "public",
+      "published_at": "2026-04-17T14:00:57Z"
     },
     {
       "id": "S01062",
@@ -58,7 +60,9 @@
       "youtube_id": "ytUZK6OCcUs",
       "scheduled": true,
       "publish_at": "2026-04-15T14:00:00+00:00",
-      "status": "scheduled"
+      "status": "uploaded",
+      "privacy_status": "public",
+      "published_at": "2026-04-15T14:01:40Z"
     },
     {
       "id": "S01110",
@@ -72,7 +76,9 @@
       "youtube_id": "Ug_FODe7wXs",
       "scheduled": true,
       "publish_at": "2026-04-19T14:00:00+00:00",
-      "status": "scheduled"
+      "status": "uploaded",
+      "privacy_status": "public",
+      "published_at": "2026-04-19T14:00:43Z"
     },
     {
       "id": "S01155",
@@ -86,7 +92,9 @@
       "youtube_id": "HtPOpOc380s",
       "scheduled": true,
       "publish_at": "2026-04-23T14:00:00+00:00",
-      "status": "scheduled"
+      "status": "uploaded",
+      "privacy_status": "public",
+      "published_at": "2026-04-23T14:00:33Z"
     },
     {
       "id": "S01183",
@@ -100,7 +108,9 @@
       "youtube_id": "yGaVthXWVFI",
       "scheduled": true,
       "publish_at": "2026-04-25T14:00:00+00:00",
-      "status": "scheduled"
+      "status": "uploaded",
+      "privacy_status": "public",
+      "published_at": "2026-04-25T14:01:28Z"
     },
     {
       "id": "S01185",
@@ -114,7 +124,9 @@
       "youtube_id": "Ye-bsuxkbdE",
       "scheduled": true,
       "publish_at": "2026-04-27T14:00:00+00:00",
-      "status": "scheduled"
+      "status": "uploaded",
+      "privacy_status": "public",
+      "published_at": "2026-04-27T14:00:52Z"
     },
     {
       "id": "S01190",
@@ -198,7 +210,9 @@
       "youtube_id": "mlYuvKBbuOA",
       "scheduled": true,
       "publish_at": "2026-04-21T14:00:00+00:00",
-      "status": "scheduled"
+      "status": "uploaded",
+      "privacy_status": "public",
+      "published_at": "2026-04-21T14:01:18Z"
     },
     {
       "id": "S00794",
@@ -334,9 +348,10 @@
       "id": "L00200",
       "title": "800 Years of Forgotten Genius: How Muslim Scientists Built the Modern World",
       "youtube_id": "Nt_xKruntQk",
-      "status": "scheduled",
-      "publish_at": "2026-04-28T14:00:00Z",
-      "type": "long"
+      "status": "on_hold_policy_violation",
+      "type": "long",
+      "policy_note": "Religious content — Islamic Golden Age. Banned per CLAUDE.md. Unscheduled on YouTube.",
+      "publish_at_original": "2026-04-28T14:00:00Z"
     },
     {
       "id": "S01220",

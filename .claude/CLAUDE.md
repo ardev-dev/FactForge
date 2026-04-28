@@ -10,7 +10,8 @@
 
 An automated YouTube channel producing English-language educational and factual short and long videos.
 
-**Channel concept: FactForge**
+**Channel name on YouTube: "The Fact Drop"** (internal codename: FactForge)
+**Channel ID:** UC2sASpaQ0lMbQkWW6AOLsqw
 Six content domains (SAFE TRACKS ONLY — no pre-made lists, ideas are generated fresh per session):
 
 1. 🤖 **AI & Technology** — GPT, robots, future of work, tech breakthroughs
@@ -47,7 +48,7 @@ At the START of every session (or when user says "resume", "status", or opens a 
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-📺  FactForge — لوحة التحكم
+📺  The Fact Drop — لوحة التحكم
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 🔴 قيد الإنتاج
@@ -400,7 +401,18 @@ In Script Writing (additional humanization):
 - **2-second rule**: every segment triggers a visual pattern interrupt (zoom/cut/pan) — no static holds
 - Max 6–8 words per caption segment
 - **CTA question MANDATORY**: Every Short must end with a direct viewer question in the last/second-to-last segment. Examples: "How many hours do you sleep? Comment below." / "Did you know this? Drop a 🤯" — this boosts Shorts feed visibility via comment engagement
+- **SUBSCRIBE-ASK MANDATORY**: Every video (Short and Long) must contain at least ONE explicit subscribe ask — either:
+  - In script: a single segment saying "Follow for more" / "Subscribe — one fact every two days" / "Hit follow if this surprised you"
+  - In description: first 3 lines must include "🔔 Subscribe for daily shocking facts" or similar
+  - Reasoning: channel currently has 0 subscribers (verified 2026-04-28). 9 public videos, 14 views, 0 subs = ZERO conversion. Subscribe-ask is the missing call-to-action.
+  - Place subscribe ask BEFORE comment-CTA in the final 2 segments — never replace comment-CTA, add to it.
 - **First segment hook rule**: seg_00 MUST use scene_query with maximum visual drama. If narration is abstract, still choose the most cinematic/shocking matching visual available.
+- **HOOK SCORING (verified weak from 8 published videos — avg 4.9/10):**
+  - ≤8 words ideal, ≤12 words max — count strictly
+  - MUST contain ≥1 shock word: `never, impossible, zero, only, less than, more than, billion, million, secret, nobody, banned, illegal, hidden, discovered, first, last, every`
+  - MUST contain a number when topic allows (numbers boost score 7→8/10)
+  - BANNED hook patterns (verified low-performing): `"In Germany, X is free"`, `"36 politicians voted for a law"`, `"A scientist edited DNA"` — flat statements
+  - REQUIRED hook patterns: `"40 BILLION photos. Scraped illegally."` / `"$1 to make. $608 to buy."` / `"Zero people survived. Until him."`
 - **Every segment MUST have scene_query** — exact English description of what should be visible on screen at that narration moment (NOT a generic category — match the spoken words)
 - **No two consecutive segments may share the same backgroundVideo filename**
 - **scene_query must match narration**: if voiceover says "medieval Baghdad", scene_query = "ancient Middle Eastern market torchlight" — not "city" or "buildings"
@@ -527,5 +539,6 @@ Understand intent, not exact wording.
 
 ## Project Created
 April 2026
-Channel: FactForge
+Channel: The Fact Drop (codename: FactForge)
+YouTube Channel ID: UC2sASpaQ0lMbQkWW6AOLsqw
 Working directory: /Users/ar/Development/projects/FactForge

@@ -1,0 +1,27 @@
+{
+  "analysis": "Hook strength of 8 published videos",
+  "average_score": 4.9,
+  "max": 10,
+  "thresholds": {
+    "strong": ">=8",
+    "medium": "5-7",
+    "weak": "<5"
+  },
+  "distribution": {
+    "strong": 1,
+    "medium": 2,
+    "weak": 5
+  },
+  "key_findings": [
+    "6 of 8 hooks lack shock words (banned, hidden, secret, etc.)",
+    "L00100 hook is 20 words — exceeds 12-word maximum",
+    "Best hook: S01185 'A company called Clearview AI scraped 40 billion photos' (8/10)",
+    "Worst hooks: S01110, S01117, S01279 — flat statements without urgency"
+  ],
+  "recommendations": [
+    "Inject 1-2 shock words (banned, secret, hidden, only, never, billion) in opening sentence",
+    "Cap hook at 8 words for shorts, 12 for longs",
+    "Lead with a number when possible — 7/10 vs 4/10 average",
+    "Avoid neutral framings ('In Germany...', '36 politicians...')"
+  ]
+}

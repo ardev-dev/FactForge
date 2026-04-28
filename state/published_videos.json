@@ -1,20 +1,71 @@
 {
   "videos": [
     {
-      "id": "S01220",
-      "title": "He Transferred $25 Million to Criminals — Because of a Fake Video Call",
-      "youtube_id": "XGE2X41-O5k",
-      "youtube_url": "https://youtu.be/XGE2X41-O5k",
-      "published_at": "2026-04-11",
-      "cleaned": true
+      "id": "L00100",
+      "youtube_id": "EhMCQu_v0vA",
+      "title": "Richest People on Earth — From Least to Most Wealthy (2026)",
+      "published_at": "",
+      "type": "short"
     },
     {
-      "id": "S00550",
-      "title": "S00550",
-      "youtube_id": "OyypfQcP_7A",
-      "youtube_url": "https://youtu.be/OyypfQcP_7A",
-      "published_at": "2026-05-22T14:00:00+00:00",
-      "cleaned": false
+      "id": "S01117",
+      "youtube_id": "zszJueVARa0",
+      "title": "36 Politicians Voted for a Law. None of Them Wrote It.",
+      "published_at": "2026-04-14T05:45:30.573247",
+      "type": "short"
+    },
+    {
+      "id": "S01279",
+      "youtube_id": "Tz0q5gw2PgE",
+      "title": "A Scientist Edited Babies' DNA. The Edits Failed. They Can't Be Undone.",
+      "published_at": "2026-04-17T14:00:57Z",
+      "type": "short"
+    },
+    {
+      "id": "S01062",
+      "youtube_id": "ytUZK6OCcUs",
+      "title": "EpiPen: $7 to Make. $608 to Buy.",
+      "published_at": "2026-04-15T14:01:40Z",
+      "type": "short"
+    },
+    {
+      "id": "S01110",
+      "youtube_id": "Ug_FODe7wXs",
+      "title": "University Costs $300 in Germany. $108,000 in the US.",
+      "published_at": "2026-04-19T14:00:43Z",
+      "type": "short"
+    },
+    {
+      "id": "S01155",
+      "youtube_id": "HtPOpOc380s",
+      "title": "Africa's Largest Dam — Built With Workers' Salaries",
+      "published_at": "2026-04-23T14:00:33Z",
+      "type": "short"
+    },
+    {
+      "id": "S01183",
+      "youtube_id": "yGaVthXWVFI",
+      "title": "A $1 Pill That Cures Hepatitis C — Sold for $84,000",
+      "published_at": "2026-04-25T14:01:28Z",
+      "type": "short"
+    },
+    {
+      "id": "S01185",
+      "youtube_id": "Ye-bsuxkbdE",
+      "title": "Your Face Is in a Database of 40 Billion Photos",
+      "published_at": "2026-04-27T14:00:52Z",
+      "type": "short"
+    },
+    {
+      "id": "L00016",
+      "youtube_id": "mlYuvKBbuOA",
+      "title": "The Wealth Gap: How the Richest 1% Came to Own More Than the Bottom 50% Combined",
+      "published_at": "2026-04-21T14:01:18Z",
+      "type": "short"
     }
-  ]
+  ],
+  "channel_totals": {
+    "total_videos_public": 9,
+    "last_updated": "2026-04-28T08:30:00Z"
+  }
 }

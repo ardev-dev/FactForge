@@ -4,18 +4,24 @@
   "phase": "idle",
   "steps": {},
   "pending_upload_ids": [],
-  "scheduled_count": 41,
-  "uploaded_count": 2,
+  "scheduled_count": 34,
+  "uploaded_count": 9,
   "next_action": "Ready for next 'produce' command — all videos scheduled",
   "queue_position": 43,
   "phase_2_database": true,
   "short_ideas_total": 1800,
   "long_ideas_total": 150,
-  "last_synced": "2026-04-28T05:20:27Z",
+  "last_synced": "2026-04-28T08:30:00Z",
   "last_produced": {
     "id": "S02900",
     "title": "NVIDIA Was Almost Bankrupt. Now It's Worth More Than Germany's Entire Economy.",
     "youtube_id": "74FlmXBbueg",
     "publish_at": "2026-06-28T14:00:00Z"
+  },
+  "last_audit": {
+    "source": "YouTube API videos.list",
+    "verified_at": "2026-04-28T08:27:00Z",
+    "all_present": true,
+    "corrected_entries": 7
   }
 }
