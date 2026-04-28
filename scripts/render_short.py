@@ -45,35 +45,20 @@ def render(video_id: str):
         print("❌ Remotion render failed")
         sys.exit(1)
 
-    print("\n[2/2] FFmpeg audio merge + cinematic color grade...")
-    # Color grade chain (vivid, broadcast-style):
-    #   eq:        +5% saturation, +3% contrast, +2% brightness
-    #   vibrance:  push under-saturated colors without crushing skin tones
-    #   unsharp:   recover detail lost in any prior re-encoding
-    #   curves:    slight S-curve for cinematic punch
-    color_chain = (
-        "eq=saturation=1.15:contrast=1.06:brightness=0.02,"
-        "vibrance=intensity=0.25,"
-        "unsharp=5:5:0.8:5:5:0.0,"
-        "curves=master='0/0 0.25/0.22 0.75/0.78 1/1'"
-    )
+    print("\n[2/2] FFmpeg audio merge (lossless video — preserves original colors)...")
+    # Pure stream copy on video — NO re-encode, NO color grading.
+    # Footage colors stay exactly as Remotion rendered them.
+    # Only audio is encoded to AAC for YouTube compatibility.
     ffmpeg_cmd = [
         "ffmpeg", "-y",
         "-i", str(noaudio_path),
         "-i", str(audio_path),
         "-map", "0:v:0",
         "-map", "1:a:0",
-        "-vf", color_chain,
-        "-c:v", "libx264",
-        "-crf", "17",            # was 18 — slightly higher quality
-        "-preset", "slow",
-        "-profile:v", "high",
-        "-level", "4.2",
-        "-pix_fmt", "yuv420p",
-        "-maxrate", "20M",
-        "-bufsize", "40M",
+        "-c:v", "copy",          # ← ZERO quality loss; original colors preserved
         "-c:a", "aac",
         "-b:a", "256k",
+        "-movflags", "+faststart",
         "-shortest",
         str(final_path),
     ]

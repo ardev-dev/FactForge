@@ -63,9 +63,10 @@ def probe_dimensions(path):
 
 
 def ensure_portrait(path):
-    """Re-encode to 1080x1920 portrait if not already.
-    Quality settings: CRF 16 + preset medium + unsharp filter for crisp output.
-    Skips if already correct dims to avoid lossy double-encode.
+    """Re-encode to 1080x1920 portrait ONLY if dimensions are wrong.
+    Pure scale+crop with lanczos (highest-quality scaler). No color filters,
+    no sharpening — preserves original colors verbatim. CRF 16 = visually
+    lossless threshold.
     """
     w, h = probe_dimensions(path)
     if w == TARGET_W and h == TARGET_H:
@@ -74,18 +75,15 @@ def ensure_portrait(path):
         logger.error(f"  ✗ probe failed: {path.name}")
         return False
     tmp = path.with_suffix(".tmp.mp4")
-    # Filter chain:
-    #   scale to height 1920 maintaining aspect
-    #   crop center to 1080 wide
-    #   unsharp: subtle sharpening to recover detail lost in scaling
-    vf = f"scale=-2:{TARGET_H}:flags=lanczos,crop={TARGET_W}:{TARGET_H},unsharp=5:5:0.6:5:5:0.0"
+    # Scale + crop only — no eq, no unsharp, no curves. Preserve source colors.
+    vf = f"scale=-2:{TARGET_H}:flags=lanczos,crop={TARGET_W}:{TARGET_H}"
     r = subprocess.run(
         [
             "ffmpeg", "-y", "-i", str(path),
             "-vf", vf,
             "-c:v", "libx264",
-            "-crf", "16",            # was 20 — bump quality
-            "-preset", "medium",     # was fast — better compression
+            "-crf", "16",            # visually lossless
+            "-preset", "medium",
             "-pix_fmt", "yuv420p",
             "-an",
             str(tmp),
@@ -94,7 +92,7 @@ def ensure_portrait(path):
     )
     if r.returncode == 0 and tmp.exists() and tmp.stat().st_size > 5000:
         tmp.replace(path)
-        logger.info(f"  ↻ re-encoded {path.name} {w}x{h} → {TARGET_W}x{TARGET_H} (CRF16+sharp)")
+        logger.info(f"  ↻ re-scaled {path.name} {w}x{h} → {TARGET_W}x{TARGET_H} (lanczos, no color edits)")
         return True
     if tmp.exists():
         tmp.unlink()

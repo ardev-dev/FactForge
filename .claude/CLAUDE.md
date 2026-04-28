@@ -463,11 +463,13 @@ In Script Writing (additional humanization):
 - **NO text overlays in center of screen** — مشاهد حية تملأ الشاشة بالكامل
 - **Captions ONLY at bottom** — KaraokeCaption component, word-by-word synced to audio
 - **Ken Burns effect** on every background segment (zoom-in / zoom-out / pan) — MUST VARY direction each segment
-- **VIVID COLORS RULE (verified Apr 2026):** clip stays at 100% saturation, NO global dark overlay.
-  - SegmentBackground default `overlayOpacity=0` — clip footage must look full-color and crisp
+- **AUTHENTIC COLORS RULE (verified Apr 2026):** preserve source colors verbatim — NO color grading, NO saturation boost, NO curves.
+  - SegmentBackground default `overlayOpacity=0` — clip footage stays as-is
   - Caption readability comes from a localized 480px `captionStrip` at the bottom only — NOT a screen-wide dimming
-  - Render pipeline applies cinematic color grade: +15% saturation, +6% contrast, vibrance, S-curve, unsharp
-  - Source bg_videos: Pixabay min_width=1280, prefer `large` quality variant, re-encode CRF 16 with lanczos+unsharp
+  - render_short.py uses `-c:v copy` on the merge step — ZERO video re-encode, original Remotion frames go directly to YouTube
+  - Source bg_videos: Pixabay min_width=1280, prefer `large` quality variant
+  - Re-encode (only when changing dimensions): lanczos scaler + CRF 16 + NO color filters
+  - WHY: source footage is already graded by its creator; YouTube re-encodes again on upload; double-grading destroys color authenticity
 - **Impact flash** on "impact" segments — subtle, no text
 - **Number stat badge** — small, positioned above captions (bottom 320px), NOT center screen
 - Background: Pexels stock videos via SegmentBackground component

@@ -78,8 +78,9 @@ def ensure_portrait(path):
     r = subprocess.run(
         [
             "ffmpeg", "-y", "-i", str(path),
-            "-vf", f"scale=-2:{TARGET_H},crop={TARGET_W}:{TARGET_H}",
-            "-c:v", "libx264", "-crf", "20", "-preset", "fast", "-an",
+            "-vf", f"scale=-2:{TARGET_H}:flags=lanczos,crop={TARGET_W}:{TARGET_H}",
+            "-c:v", "libx264", "-crf", "16", "-preset", "medium",
+            "-pix_fmt", "yuv420p", "-an",
             str(tmp),
         ],
         capture_output=True,
