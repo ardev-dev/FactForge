@@ -284,9 +284,44 @@ When user says "produce next video" (Short):
 12. SEO gate: score metadata ≥ 18/22 (youtube_seo.md) — revise if fails
 13. Publish: `python3 scripts/finalize_and_upload.py [id]` — handles upload + state in one step
     - publish date: auto-calculated via utils/youtube_helper.get_next_publish_date() — never ask user
-    - **NO thumbnail** — YouTube auto-selects from video frames for ALL video types
+    - **NO custom thumbnail** — YouTube does not allow custom thumbnails for Shorts. We engineer the FIRST FRAME (`hero` segment) to be auto-picked as thumbnail. See "HERO FRAME" rule above.
 14. Auto-clean: delete video.mp4, audio.mp3, bg_videos/, public/[id]/ after successful upload
 15. Subtitles: generate SRT for 7 languages (EN/AR/ES/FR/HI/PT/TR) → upload via captions().insert()
+
+## Hashtag Strategy — MANDATORY for all Shorts
+
+YouTube uses hashtags as a primary discovery signal for Shorts. Current channel state (verified 2026-04-28): no hashtags in titles, generic hashtags in descriptions = ZERO discovery boost.
+
+**TITLE hashtags (3 max — YouTube ignores everything past the 3rd):**
+- ALWAYS include `#shorts` as one of the 3 — required for Shorts feed inclusion
+- 2 other hashtags should be SPECIFIC to topic (high-intent, low-saturation)
+- Format: `Title text here #shorts #SpecificTopic #NicheTag`
+- Title hashtags count toward 100-char title limit
+
+**DESCRIPTION hashtags (10-15, on a single line at the end):**
+- First line: `#shorts` always
+- Mix of:
+  - 3-4 broad topical (e.g. `#science #economy #technology`)
+  - 4-5 specific to the video (e.g. `#microplastics #plasticpollution`)
+  - 2-3 trending/discoverability (e.g. `#mindblown #didyouknow`) — but NOT saturated like `#facts`
+- AVOID forever: `#FactForge` (zero searches), `#viral` (algorithm penalty), `#fyp` (TikTok-only)
+
+**TAGS field (separate from hashtags) — 8-12 tags:**
+- 1-3 word phrases, NO `#` symbol
+- Mix exact-match (`microplastic in body`) + broad (`science facts`) + entity (`Clearview AI`)
+
+**Verified weak patterns from current videos:**
+- ❌ Title with zero hashtags (8/8 of analyzed videos) — losing 30%+ Shorts feed reach
+- ❌ Description starting with description text instead of `#shorts` — algorithm reads first line for context
+- ❌ Saturated hashtags `#facts #didyouknow` — competing with millions of videos
+
+**Required pattern going forward:**
+```
+Title: "40 Billion Photos. Scraped Illegally. #shorts #AI #PrivacyAlert"
+Description: "#shorts #ai #privacy #clearview #surveillance #mindblown #shocking #technology
+
+Real description text starts here..."
+```
 
 ### Long Videos (Documentary Format)
 
@@ -407,6 +442,19 @@ In Script Writing (additional humanization):
   - Reasoning: channel currently has 0 subscribers (verified 2026-04-28). 9 public videos, 14 views, 0 subs = ZERO conversion. Subscribe-ask is the missing call-to-action.
   - Place subscribe ask BEFORE comment-CTA in the final 2 segments — never replace comment-CTA, add to it.
 - **First segment hook rule**: seg_00 MUST use scene_query with maximum visual drama. If narration is abstract, still choose the most cinematic/shocking matching visual available.
+- **HERO FRAME (Shorts thumbnail trap) — MANDATORY for every Short:**
+  YouTube does NOT allow custom thumbnails for Shorts — it auto-picks an early frame. We engineer frame 0 to BE that thumbnail.
+  - First segment MUST be `type: "hero"` with `durationFrames: 15` (0.25s at 60fps)
+  - `kenBurns` is ignored (rendered static — no motion blur in thumbnail)
+  - Then `flash` segments begin from frame 15 onwards
+  - **scene_query rules for hero (DIFFERENT from regular segments):**
+    - SINGLE dominant subject (a face, a single object, a clear icon)
+    - HIGH contrast: dark background + bright subject (or vice versa)
+    - NO crowds, NO text, NO multi-subject scenes
+    - Subject must be readable at 200×355px (Shorts feed thumbnail size)
+    - Examples GOOD: `"close-up human eye crying single tear dramatic lighting"`, `"single dollar bill burning flames black background"`, `"lone astronaut floating in space dark void"`
+    - Examples BAD: `"city aerial view"` (too busy), `"crowd of people"` (no focus), `"abstract pattern"` (low click)
+  - audio.mp3 already has 3s silence prepended → hero (15f) + flash (165f) = 180f = 3s of silence-aligned visuals
 - **HOOK SCORING (verified weak from 8 published videos — avg 4.9/10):**
   - ≤8 words ideal, ≤12 words max — count strictly
   - MUST contain ≥1 shock word: `never, impossible, zero, only, less than, more than, billion, million, secret, nobody, banned, illegal, hidden, discovered, first, last, every`

@@ -36,6 +36,7 @@ export const segmentSchema = z.object({
   endFrame: z.number(),
   // visual treatment
   type: z.enum([
+    "hero",       // frame-0 thumbnail trap — sharp, static, high-contrast (12-18 frames)
     "flash",      // rapid-cut intro shot — bg only, no captions
     "hook",       // opening line — massive, accent
     "fact",       // normal fact sentence
@@ -137,6 +138,38 @@ const SegmentView: React.FC<SegmentViewProps> = ({ seg, accentColor, globalBgGra
   ) : (
     <AbsoluteFill style={{ background: globalBgGradient }} />
   );
+
+  // ── HERO: frame-0 thumbnail trap — STATIC, sharp, high-contrast ──────────
+  // YouTube Shorts auto-picks an early frame as thumbnail. This segment is
+  // engineered to BE that frame: no motion, strong vignette, accent rim.
+  // Place ONLY at startFrame=0, durationFrames=12-18 (~0.2-0.3s).
+  if (seg.type === "hero") {
+    return (
+      <AbsoluteFill>
+        {/* Background frozen — no Ken Burns, no scale animation */}
+        {seg.backgroundVideo ? (
+          <SegmentBackground
+            src={seg.backgroundVideo}
+            kenBurns="zoom-in"
+            overlayOpacity={0.15}        // less dim — thumbnail must be bright
+            accentColor={accentColor}
+          />
+        ) : (
+          <AbsoluteFill style={{ background: globalBgGradient }} />
+        )}
+        {/* Strong center vignette: focuses the eye, boosts contrast */}
+        <AbsoluteFill style={{
+          background: "radial-gradient(ellipse at 50% 45%, transparent 28%, rgba(0,0,0,0.78) 100%)",
+          pointerEvents: "none",
+        }} />
+        {/* Accent rim glow (top + bottom) — adds branded color signal */}
+        <AbsoluteFill style={{
+          background: `linear-gradient(to bottom, ${accentColor}55 0%, transparent 12%, transparent 88%, ${accentColor}55 100%)`,
+          pointerEvents: "none",
+        }} />
+      </AbsoluteFill>
+    );
+  }
 
   // ── FLASH: rapid-cut intro shot — full-bleed bg, slight scale punch, no caption ──
   if (seg.type === "flash") {
