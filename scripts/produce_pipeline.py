@@ -94,9 +94,6 @@ def step_props(vid):
     intro_segs = [s for s in script["segments"] if s.get("type") in ("hero", "flash")]
     narration_segs = [s for s in script["segments"] if s.get("type") not in ("hero", "flash")]
 
-    def normalize(t):
-        return re.sub(r"[^\w\s]", "", t.lower()).split()
-
     segments_out, cur_frame, flash_idx = [], 0, 0
     for seg in intro_segs:
         df = seg.get("durationFrames", 30)
@@ -114,31 +111,61 @@ def step_props(vid):
         })
         cur_frame += df
 
+    # ── Robust word allocation ──────────────────────────────────────────────
+    # Old algorithm fuzzy-matched per word → broke when match failed and
+    # consumed all remaining words into one segment (verified bug in S02901
+    # where segment 7 spanned 38.4 of 43.7 seconds).
+    #
+    # New algorithm: count words per segment, slice word_timestamps array
+    # by cumulative word count. Boundaries are deterministic and total
+    # never exceeds available words.
+    def word_count(text):
+        return len(re.findall(r"\b\w+\b", text))
+
+    counts = [word_count(s["text"]) for s in narration_segs]
+    total_words = sum(counts) or 1
+    available = len(words)
+
+    # Scale counts proportionally if word_timestamps has fewer/more words
+    # (whisper sometimes splits/merges differently from script tokenization)
+    if available != total_words:
+        scale = available / total_words
+        scaled = [max(1, round(c * scale)) for c in counts]
+        # Adjust last to consume exactly `available`
+        diff = available - sum(scaled)
+        if scaled:
+            scaled[-1] = max(1, scaled[-1] + diff)
+        counts = scaled
+
     word_idx = 0
+    narration_start_frame = cur_frame  # used as outro fallback
     for i, seg in enumerate(narration_segs):
-        seg_words = normalize(seg["text"])
+        n = counts[i] if i < len(counts) else 1
+        seg_words = words[word_idx : word_idx + n]
         if not seg_words:
-            continue
-        start_ms = words[word_idx]["start_ms"] if word_idx < len(words) else 0
-        for w in seg_words:
-            while word_idx < len(words):
-                wt = re.sub(r"[^\w]", "", words[word_idx]["word"].lower())
-                if wt.startswith(w[:3]) or w.startswith(wt[:3]):
-                    break
-                word_idx += 1
-            if word_idx < len(words):
-                word_idx += 1
-        end_ms = (
-            words[word_idx - 1]["end_ms"]
-            if word_idx > 0 and word_idx - 1 < len(words)
-            else start_ms + 1500
-        )
-        start_f = math.floor(start_ms * FPS / 1000)
-        end_f = math.ceil(end_ms * FPS / 1000)
+            # No words left — distribute remaining time evenly across remaining segs
+            remaining = len(narration_segs) - i
+            avail_frames = max(0, total_frames - cur_frame)
+            slice_f = max(60, avail_frames // max(1, remaining))
+            start_f, end_f = cur_frame, cur_frame + slice_f
+        else:
+            start_ms = seg_words[0]["start_ms"]
+            end_ms = seg_words[-1]["end_ms"]
+            start_f = math.floor(start_ms * FPS / 1000)
+            end_f = math.ceil(end_ms * FPS / 1000)
+            word_idx += n
+            # Add small padding (200ms) so caption stays past last word
+            end_f += 12
+
         if start_f < cur_frame:
             start_f = cur_frame
-        if end_f <= start_f:
-            end_f = start_f + 60
+        # Prevent any single segment from running past total_frames
+        if end_f > total_frames:
+            end_f = total_frames
+        # Ensure minimum visible duration of 30 frames
+        if end_f - start_f < 30:
+            end_f = min(start_f + 60, total_frames)
+
         segments_out.append({
             **seg,
             "startFrame": start_f,
@@ -147,8 +174,14 @@ def step_props(vid):
         })
         cur_frame = end_f
 
+    # Ensure last narration segment reaches total_frames (fills outro)
     if segments_out and segments_out[-1]["endFrame"] < total_frames:
         segments_out[-1]["endFrame"] = total_frames
+
+    # Sanity: no segment should exceed 8s (visual stagnation = viewer exit)
+    for s in segments_out:
+        if s["endFrame"] - s["startFrame"] > 8 * FPS:
+            print(f"  ⚠ {s.get('type')} segment is {(s['endFrame']-s['startFrame'])/FPS:.1f}s — too long!")
 
     props = {
         "videoId": vid,
