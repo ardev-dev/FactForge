@@ -472,10 +472,11 @@
       "scheduled": true,
       "notes": "Old video (1i5q0q48hbc) has no audio — must delete and re-upload. video.mp4 is fixed.",
       "old_youtube_id": "1i5q0q48hbc",
-      "youtube_id": "slA6RrCdhI8",
-      "needs_reupload_audio_fix": true,
+      "youtube_id": "cDxGSLS-DUQ",
+      "needs_reupload_audio_fix": false,
       "local_video_repaired": true,
-      "repair_note": "Audio gaps fixed locally — re-upload needed (delete + insert)"
+      "repair_note": "Audio gaps fixed locally — re-upload needed (delete + insert)",
+      "repaired_uploaded_at": "2026-04-28T07:10:29Z"
     },
     {
       "id": "S02500",
@@ -485,12 +486,13 @@
       "ready": true,
       "status": "scheduled",
       "type": "short",
-      "youtube_id": "fbyb2C2RvWg",
+      "youtube_id": "i-0zomFosGQ",
       "publish_at": "2026-06-18T14:00:00Z",
       "scheduled": true,
-      "needs_reupload_audio_fix": true,
+      "needs_reupload_audio_fix": false,
       "local_video_repaired": true,
-      "repair_note": "Audio gaps fixed locally — re-upload needed (delete + insert)"
+      "repair_note": "Audio gaps fixed locally — re-upload needed (delete + insert)",
+      "repaired_uploaded_at": "2026-04-28T07:11:28Z"
     },
     {
       "id": "S02600",
@@ -500,48 +502,52 @@
       "ready": true,
       "status": "scheduled",
       "type": "short",
-      "youtube_id": "IopufVL9IT8",
+      "youtube_id": "dgiVrwio73w",
       "publish_at": "2026-06-20T14:00:00Z",
       "scheduled": true,
-      "needs_reupload_audio_fix": true,
+      "needs_reupload_audio_fix": false,
       "local_video_repaired": true,
-      "repair_note": "Audio gaps fixed locally — re-upload needed (delete + insert)"
+      "repair_note": "Audio gaps fixed locally — re-upload needed (delete + insert)",
+      "repaired_uploaded_at": "2026-04-28T07:12:22Z"
     },
     {
       "id": "S02700",
       "title": "Harvard Scientists Were Paid to Blame Fat — Not Sugar — For Heart Disease",
-      "youtube_id": "acKeFjjb5Gs",
+      "youtube_id": "egqa26Fcj8o",
       "status": "scheduled",
       "publish_at": "2026-06-24T14:00:00Z",
       "type": "short",
       "scheduled": true,
-      "needs_reupload_audio_fix": true,
+      "needs_reupload_audio_fix": false,
       "local_video_repaired": true,
-      "repair_note": "Audio gaps fixed locally — re-upload needed (delete + insert)"
+      "repair_note": "Audio gaps fixed locally — re-upload needed (delete + insert)",
+      "repaired_uploaded_at": "2026-04-28T07:13:21Z"
     },
     {
       "id": "S02800",
       "title": "Your Gut Makes 95% of Your Serotonin — Not Your Brain",
-      "youtube_id": "tKdoXVT6Ubg",
+      "youtube_id": "gIOUboxMLTg",
       "status": "scheduled",
       "publish_at": "2026-06-26T14:00:00Z",
       "type": "short",
       "scheduled": true,
-      "needs_reupload_audio_fix": true,
+      "needs_reupload_audio_fix": false,
       "local_video_repaired": true,
-      "repair_note": "Audio gaps fixed locally — re-upload needed (delete + insert)"
+      "repair_note": "Audio gaps fixed locally — re-upload needed (delete + insert)",
+      "repaired_uploaded_at": "2026-04-28T07:14:05Z"
     },
     {
       "id": "S02900",
       "title": "NVIDIA Was Almost Bankrupt. Now It's Worth More Than Germany's Entire Economy.",
-      "youtube_id": "74FlmXBbueg",
+      "youtube_id": "klhX0H5zc5k",
       "status": "scheduled",
       "publish_at": "2026-06-28T14:00:00Z",
       "type": "short",
       "scheduled": true,
-      "needs_reupload_audio_fix": true,
+      "needs_reupload_audio_fix": false,
       "local_video_repaired": true,
-      "repair_note": "Audio gaps fixed locally — re-upload needed (delete + insert)"
+      "repair_note": "Audio gaps fixed locally — re-upload needed (delete + insert)",
+      "repaired_uploaded_at": "2026-04-28T07:16:34Z"
     }
   ]
 }
