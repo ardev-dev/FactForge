@@ -18,7 +18,7 @@ interface SegmentBackgroundProps {
 export const SegmentBackground: React.FC<SegmentBackgroundProps> = ({
   src,
   kenBurns = "zoom-in",
-  overlayOpacity = 0.65,
+  overlayOpacity = 0,        // NO global dark overlay — clip stays vivid
   accentColor = "#38B2AC",
 }) => {
   const frame = useCurrentFrame();
@@ -62,19 +62,15 @@ export const SegmentBackground: React.FC<SegmentBackgroundProps> = ({
         />
       </AbsoluteFill>
 
-      {/* Dark overlay */}
-      <AbsoluteFill
-        style={{
-          backgroundColor: `rgba(10,10,15,${overlayOpacity})`,
-        }}
-      />
-
-      {/* Accent color tint at bottom (subtle) */}
-      <AbsoluteFill
-        style={{
-          background: `linear-gradient(to top, ${accentColor}18 0%, transparent 40%)`,
-        }}
-      />
+      {/* Optional dark overlay — only if explicitly requested (impact moments) */}
+      {overlayOpacity > 0 && (
+        <AbsoluteFill
+          style={{
+            backgroundColor: `rgba(10,10,15,${overlayOpacity})`,
+          }}
+        />
+      )}
+      {/* No accent tint — clip colors must remain pure */}
     </AbsoluteFill>
   );
 };

@@ -127,16 +127,33 @@ const SegmentView: React.FC<SegmentViewProps> = ({ seg, accentColor, globalBgGra
   const kenBurns = seg.kenBurns ?? KB_MODES[seg.startFrame % 4];
   const segDuration = seg.endFrame - seg.startFrame;
 
-  // ── Per-segment background (full screen, no overlay text) ─────────────────
+  // ── Per-segment background — NO global dark overlay ──────────────────────
+  // Clip stays vivid and full-color. Caption readability comes ONLY from a
+  // localized gradient pinned to the caption strip at the bottom.
   const bg = seg.backgroundVideo ? (
     <SegmentBackground
       src={seg.backgroundVideo}
       kenBurns={kenBurns}
-      overlayOpacity={seg.type === "impact" ? 0.30 : 0.20}
+      overlayOpacity={0}
       accentColor={accentColor}
     />
   ) : (
     <AbsoluteFill style={{ background: globalBgGradient }} />
+  );
+
+  // Caption strip: covers ONLY the bottom 480px (≈25% of 1920) where karaoke
+  // captions render. Above that strip the clip is 100% pristine.
+  // Captions sit at bottomOffset=320, fontSize=76 → strip from y=240 (bottom 240..720)
+  // We use a narrow gradient: solid darker behind text, fading up cleanly.
+  const captionStrip = (
+    <div style={{
+      position: "absolute",
+      left: 0, right: 0,
+      bottom: 0,
+      height: 480,
+      background: "linear-gradient(to top, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.55) 35%, rgba(0,0,0,0.20) 75%, transparent 100%)",
+      pointerEvents: "none",
+    }} />
   );
 
   // ── HERO: frame-0 thumbnail trap — STATIC, sharp, high-contrast ──────────
@@ -157,14 +174,9 @@ const SegmentView: React.FC<SegmentViewProps> = ({ seg, accentColor, globalBgGra
         ) : (
           <AbsoluteFill style={{ background: globalBgGradient }} />
         )}
-        {/* Strong center vignette: focuses the eye, boosts contrast */}
+        {/* Very soft corner darkening — preserves center brightness */}
         <AbsoluteFill style={{
-          background: "radial-gradient(ellipse at 50% 45%, transparent 28%, rgba(0,0,0,0.78) 100%)",
-          pointerEvents: "none",
-        }} />
-        {/* Accent rim glow (top + bottom) — adds branded color signal */}
-        <AbsoluteFill style={{
-          background: `linear-gradient(to bottom, ${accentColor}55 0%, transparent 12%, transparent 88%, ${accentColor}55 100%)`,
+          background: "radial-gradient(ellipse at 50% 50%, transparent 65%, rgba(0,0,0,0.30) 100%)",
           pointerEvents: "none",
         }} />
       </AbsoluteFill>
@@ -187,17 +199,13 @@ const SegmentView: React.FC<SegmentViewProps> = ({ seg, accentColor, globalBgGra
     );
   }
 
-  // ── IMPACT: subtle flash effect only (no text) ────────────────────────────
+  // ── IMPACT: subtle flash, clip stays vivid, caption strip only ─────────────
   if (seg.type === "impact") {
     return (
       <AbsoluteFill>
         {bg}
         <ImpactFlash accentColor={accentColor} flashDurationFrames={8} />
-        {/* Bottom gradient to ensure caption readability */}
-        <AbsoluteFill style={{
-          background: "linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 35%)",
-          pointerEvents: "none",
-        }} />
+        {captionStrip}
       </AbsoluteFill>
     );
   }
@@ -212,11 +220,7 @@ const SegmentView: React.FC<SegmentViewProps> = ({ seg, accentColor, globalBgGra
       <AbsoluteFill>
         {bg}
         <ImpactFlash accentColor={accentColor} flashDurationFrames={5} />
-        {/* Bottom gradient */}
-        <AbsoluteFill style={{
-          background: "linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 40%)",
-          pointerEvents: "none",
-        }} />
+        {captionStrip}
         {/* Stat badge — sits above captions, small and unobtrusive */}
         <div style={{
           position: "absolute",
@@ -243,9 +247,8 @@ const SegmentView: React.FC<SegmentViewProps> = ({ seg, accentColor, globalBgGra
     );
   }
 
-  // ── HOOK / FACT / CTA — pure cinematic video, no text overlay ────────────
+  // ── HOOK — pure cinematic video, full color, caption strip only ──────────
   if (seg.type === "hook") {
-    // Hook: slow zoom-in cinematic feel
     const bgScale = interpolate(frame, [0, segDuration], [1.0, 1.08], {
       extrapolateLeft: "clamp", extrapolateRight: "clamp",
     });
@@ -254,22 +257,16 @@ const SegmentView: React.FC<SegmentViewProps> = ({ seg, accentColor, globalBgGra
         <div style={{ transform: `scale(${bgScale})`, width: "100%", height: "100%" }}>
           {bg}
         </div>
-        <AbsoluteFill style={{
-          background: "linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 40%)",
-          pointerEvents: "none",
-        }} />
+        {captionStrip}
       </AbsoluteFill>
     );
   }
 
-  // ── DEFAULT (fact / cta) ──────────────────────────────────────────────────
+  // ── DEFAULT (fact / cta) — full color clip + caption strip only ───────────
   return (
     <AbsoluteFill>
       {bg}
-      <AbsoluteFill style={{
-        background: "linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 35%)",
-        pointerEvents: "none",
-      }} />
+      {captionStrip}
       {/* Stickman character — renders above background, below captions */}
       {seg.stickman && (
         <StickmanScene

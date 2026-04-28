@@ -19,18 +19,29 @@ for line in dotenv.read_text().splitlines():
 PIXABAY_KEY = env.get("PIXABAY_API_KEY", "")
 
 def pixabay_search(query):
-    url = f"https://pixabay.com/api/videos/?key={PIXABAY_KEY}&q={urllib.parse.quote(query)}&per_page=5&video_type=film"
+    """Pick the highest-quality variant available — large > medium > small.
+    Also require min_width=1280 to avoid sub-HD source footage."""
+    url = f"https://pixabay.com/api/videos/?key={PIXABAY_KEY}&q={urllib.parse.quote(query)}&per_page=5&video_type=film&min_width=1280"
     try:
         with urllib.request.urlopen(url, timeout=15) as r:
             data = json.load(r)
         for hit in data.get("hits", []):
-            for q in ("medium","small","large"):
-                u = hit.get("videos",{}).get(q,{}).get("url")
+            # Prefer LARGE (1920+ wide) → MEDIUM (1280) → SMALL (last resort)
+            for q in ("large", "medium", "small"):
+                v = hit.get("videos", {}).get(q, {})
+                u = v.get("url")
+                w = v.get("width", 0)
+                if u and w >= 1280:
+                    return u, w, v.get("height", 0)
+        # fallback: any if min_width filter found nothing
+        for hit in data.get("hits", []):
+            for q in ("large", "medium", "small"):
+                u = hit.get("videos", {}).get(q, {}).get("url")
                 if u:
-                    return u
+                    return u, 0, 0
     except Exception as e:
         logger.warning(f"Pixabay failed '{query}': {e}")
-    return None
+    return None, 0, 0
 
 def download(url, out_path):
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
@@ -52,7 +63,10 @@ def probe_dimensions(path):
 
 
 def ensure_portrait(path):
-    """Re-encode to 1080x1920 portrait if not already. Remotion requires exact dims."""
+    """Re-encode to 1080x1920 portrait if not already.
+    Quality settings: CRF 16 + preset medium + unsharp filter for crisp output.
+    Skips if already correct dims to avoid lossy double-encode.
+    """
     w, h = probe_dimensions(path)
     if w == TARGET_W and h == TARGET_H:
         return True
@@ -60,18 +74,27 @@ def ensure_portrait(path):
         logger.error(f"  ✗ probe failed: {path.name}")
         return False
     tmp = path.with_suffix(".tmp.mp4")
+    # Filter chain:
+    #   scale to height 1920 maintaining aspect
+    #   crop center to 1080 wide
+    #   unsharp: subtle sharpening to recover detail lost in scaling
+    vf = f"scale=-2:{TARGET_H}:flags=lanczos,crop={TARGET_W}:{TARGET_H},unsharp=5:5:0.6:5:5:0.0"
     r = subprocess.run(
         [
             "ffmpeg", "-y", "-i", str(path),
-            "-vf", f"scale=-2:{TARGET_H},crop={TARGET_W}:{TARGET_H}",
-            "-c:v", "libx264", "-crf", "20", "-preset", "fast", "-an",
+            "-vf", vf,
+            "-c:v", "libx264",
+            "-crf", "16",            # was 20 — bump quality
+            "-preset", "medium",     # was fast — better compression
+            "-pix_fmt", "yuv420p",
+            "-an",
             str(tmp),
         ],
         capture_output=True,
     )
     if r.returncode == 0 and tmp.exists() and tmp.stat().st_size > 5000:
         tmp.replace(path)
-        logger.info(f"  ↻ re-encoded {path.name} {w}x{h} → {TARGET_W}x{TARGET_H}")
+        logger.info(f"  ↻ re-encoded {path.name} {w}x{h} → {TARGET_W}x{TARGET_H} (CRF16+sharp)")
         return True
     if tmp.exists():
         tmp.unlink()

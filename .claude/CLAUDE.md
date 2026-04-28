@@ -463,7 +463,11 @@ In Script Writing (additional humanization):
 - **NO text overlays in center of screen** — مشاهد حية تملأ الشاشة بالكامل
 - **Captions ONLY at bottom** — KaraokeCaption component, word-by-word synced to audio
 - **Ken Burns effect** on every background segment (zoom-in / zoom-out / pan) — MUST VARY direction each segment
-- **Dark gradient overlay** at bottom 35% only — for caption readability
+- **VIVID COLORS RULE (verified Apr 2026):** clip stays at 100% saturation, NO global dark overlay.
+  - SegmentBackground default `overlayOpacity=0` — clip footage must look full-color and crisp
+  - Caption readability comes from a localized 480px `captionStrip` at the bottom only — NOT a screen-wide dimming
+  - Render pipeline applies cinematic color grade: +15% saturation, +6% contrast, vibrance, S-curve, unsharp
+  - Source bg_videos: Pixabay min_width=1280, prefer `large` quality variant, re-encode CRF 16 with lanczos+unsharp
 - **Impact flash** on "impact" segments — subtle, no text
 - **Number stat badge** — small, positioned above captions (bottom 320px), NOT center screen
 - Background: Pexels stock videos via SegmentBackground component
