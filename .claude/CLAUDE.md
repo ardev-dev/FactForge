@@ -19,6 +19,41 @@ An automated YouTube channel producing English-language educational and factual 
    Stay within this lane — it's where the channel's content already clusters (22/43 videos).
    Three official playlists: Big Pharma Exposed, Tech Surveillance & Privacy Theft, Corporate Greed Files.
 
+## 🏆 PRODUCTION STANDARD: S02902 Baseline (locked 2026-04-28)
+
+User-approved reference quality. Every new short MUST match or exceed it.
+Enforced automatically by `scripts/production_audit.py` (step 11/11 in pipeline).
+If the audit fails, upload is BLOCKED.
+
+**S02902 actual measurements (the floor):**
+```
+Video:    1080×1920 @ 60fps · 7,420 kbps · h264 high profile · 54.1s duration
+Audio:    aac 249 kbps @ 96kHz · LUFS -13.8 · true peak -1.0 dB · 0ms drift
+          0 silences anywhere · ambient layer present (7+ scene-matched foley)
+Structure: 1 hero (0.25s) + 5 flash (2.5s) + 10 narration · max visual hold 8.5s
+Script:   13-word hook with shock word "died" · content score 94 · subscribe + comment CTA
+Metadata: 72-char title + 3 hashtags (#shorts mandatory) · 14 tags · description
+          starts with hashtag line · cites sources · subscribe ask
+```
+
+**Audit thresholds (all enforced automatically):**
+- Resolution exactly 1080×1920 · FPS exactly 60
+- Duration in [35, 60] seconds
+- Video bitrate ≥ 5,000 kbps
+- LUFS in [-15, -13] · true peak < -0.5 dBTP · drift < 150ms
+- No silence > 500ms anywhere
+- 1 hero (12-18 frames) + 4-6 flash + 7-12 narration + cta required
+- Max single visual hold ≤ 9s (pipeline aims for ≤5s via auto sub-cuts)
+- Hook ≤ 13 words AND contains shock word
+- Subscribe + Comment CTAs in script
+- Title 50-100 chars · #shorts + 1-2 specific hashtags
+- Description starts with hashtag line · contains "Subscribe" · cites sources
+- 8-15 tags
+
+**Run on demand:** `python3 scripts/production_audit.py [id]` — exit 0 = pass.
+
+---
+
 Six content domains (SAFE TRACKS ONLY — no pre-made lists, ideas are generated fresh per session):
 
 1. 🤖 **AI & Technology** — GPT, robots, future of work, tech breakthroughs

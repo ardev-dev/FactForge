@@ -273,10 +273,20 @@ def step_lufs(vid):
 
 
 def step_qc(vid):
-    step("[10/10] Audio QC gate")
+    step("[10/11] Audio QC gate")
     r = subprocess.run([sys.executable, str(ROOT / "scripts/audio_qc.py"), vid])
     if r.returncode != 0:
         raise RuntimeError(f"QC FAILED for {vid} — fix before upload")
+
+
+def step_production_audit(vid):
+    step("[11/11] Production Audit — S02902 baseline gate")
+    r = subprocess.run([sys.executable, str(ROOT / "scripts/production_audit.py"), vid])
+    if r.returncode != 0:
+        raise RuntimeError(
+            f"PRODUCTION AUDIT FAILED for {vid} — "
+            f"video does not match S02902 baseline. Review issues above and fix."
+        )
 
 
 def main():
@@ -304,6 +314,7 @@ def main():
     step_scene_ambient(vid)
     step_lufs(vid)
     step_qc(vid)
+    step_production_audit(vid)
 
     print(f"\n{'═'*70}\n✅ {vid} ready for upload — output/{vid}/video.mp4\n{'═'*70}")
 
