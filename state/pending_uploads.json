@@ -562,6 +562,18 @@
       "niche": "Big Industry Exposed",
       "needs_reupload_audio_fix": false,
       "repaired_uploaded_at": "2026-04-28T08:49:50Z"
+    },
+    {
+      "id": "S02902",
+      "title": "Boeing Knew the 737 MAX Could Crash. 346 Died. #shorts #Boeing #Aviation",
+      "video_file": "output/S02902/video.mp4",
+      "metadata_file": "output/S02902/metadata.json",
+      "youtube_id": "0LAhP9dixNI",
+      "publish_at": "2026-07-02T14:00:00Z",
+      "status": "scheduled",
+      "type": "short",
+      "scheduled": true,
+      "niche": "Big Industry Exposed"
     }
   ]
 }

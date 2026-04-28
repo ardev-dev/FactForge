@@ -166,22 +166,50 @@ def step_props(vid):
         if end_f - start_f < 30:
             end_f = min(start_f + 60, total_frames)
 
-        segments_out.append({
-            **seg,
-            "startFrame": start_f,
-            "endFrame": end_f,
-            "backgroundVideo": f"{vid}/bg_videos/seg_{i:02d}.mp4",
-        })
+        # ── Anti-stagnation: split segments > 5s into visual sub-cuts ─────
+        # Audio + caption stays continuous; we just rotate the bg_video and
+        # reset Ken Burns mid-way so the visual changes. Source bg_video is
+        # the same one (no extra fetch needed) — Ken Burns variation creates
+        # the "second cut" feel.
+        MAX_VISUAL_HOLD = 5 * FPS  # 5 seconds = max single-shot dwell
+        segment_dur = end_f - start_f
+        if segment_dur > MAX_VISUAL_HOLD:
+            n_cuts = math.ceil(segment_dur / MAX_VISUAL_HOLD)
+            slice_dur = segment_dur // n_cuts
+            kb_modes = ["zoom-in", "zoom-out", "pan-left", "pan-right"]
+            for c in range(n_cuts):
+                cut_start = start_f + c * slice_dur
+                cut_end = cut_start + slice_dur if c < n_cuts - 1 else end_f
+                # Each sub-cut: rotate Ken Burns, append _cN suffix to bgVideo
+                # so we can distinguish in scene_ambient (uses same source file).
+                kb = kb_modes[(c + i) % len(kb_modes)]
+                segments_out.append({
+                    **seg,
+                    "type": seg["type"] if c == 0 else "fact",  # caption only on first
+                    "kenBurns": kb,
+                    "startFrame": cut_start,
+                    "endFrame": cut_end,
+                    "backgroundVideo": f"{vid}/bg_videos/seg_{i:02d}.mp4",
+                    "_visual_cut_index": c,  # debug
+                })
+        else:
+            segments_out.append({
+                **seg,
+                "startFrame": start_f,
+                "endFrame": end_f,
+                "backgroundVideo": f"{vid}/bg_videos/seg_{i:02d}.mp4",
+            })
         cur_frame = end_f
 
     # Ensure last narration segment reaches total_frames (fills outro)
     if segments_out and segments_out[-1]["endFrame"] < total_frames:
         segments_out[-1]["endFrame"] = total_frames
 
-    # Sanity: no segment should exceed 8s (visual stagnation = viewer exit)
+    # Sanity check: no segment exceeds the visual-hold limit
     for s in segments_out:
-        if s["endFrame"] - s["startFrame"] > 8 * FPS:
-            print(f"  ⚠ {s.get('type')} segment is {(s['endFrame']-s['startFrame'])/FPS:.1f}s — too long!")
+        d = s["endFrame"] - s["startFrame"]
+        if d > MAX_VISUAL_HOLD and s.get("type") not in ("hero", "flash"):
+            print(f"  ⚠ {s.get('type')} segment still {d/FPS:.1f}s — splitting failed!")
 
     props = {
         "videoId": vid,
