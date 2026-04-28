@@ -472,7 +472,10 @@
       "scheduled": true,
       "notes": "Old video (1i5q0q48hbc) has no audio — must delete and re-upload. video.mp4 is fixed.",
       "old_youtube_id": "1i5q0q48hbc",
-      "youtube_id": "slA6RrCdhI8"
+      "youtube_id": "slA6RrCdhI8",
+      "needs_reupload_audio_fix": true,
+      "local_video_repaired": true,
+      "repair_note": "Audio gaps fixed locally — re-upload needed (delete + insert)"
     },
     {
       "id": "S02500",
@@ -484,7 +487,10 @@
       "type": "short",
       "youtube_id": "fbyb2C2RvWg",
       "publish_at": "2026-06-18T14:00:00Z",
-      "scheduled": true
+      "scheduled": true,
+      "needs_reupload_audio_fix": true,
+      "local_video_repaired": true,
+      "repair_note": "Audio gaps fixed locally — re-upload needed (delete + insert)"
     },
     {
       "id": "S02600",
@@ -496,7 +502,10 @@
       "type": "short",
       "youtube_id": "IopufVL9IT8",
       "publish_at": "2026-06-20T14:00:00Z",
-      "scheduled": true
+      "scheduled": true,
+      "needs_reupload_audio_fix": true,
+      "local_video_repaired": true,
+      "repair_note": "Audio gaps fixed locally — re-upload needed (delete + insert)"
     },
     {
       "id": "S02700",
@@ -505,7 +514,10 @@
       "status": "scheduled",
       "publish_at": "2026-06-24T14:00:00Z",
       "type": "short",
-      "scheduled": true
+      "scheduled": true,
+      "needs_reupload_audio_fix": true,
+      "local_video_repaired": true,
+      "repair_note": "Audio gaps fixed locally — re-upload needed (delete + insert)"
     },
     {
       "id": "S02800",
@@ -514,7 +526,10 @@
       "status": "scheduled",
       "publish_at": "2026-06-26T14:00:00Z",
       "type": "short",
-      "scheduled": true
+      "scheduled": true,
+      "needs_reupload_audio_fix": true,
+      "local_video_repaired": true,
+      "repair_note": "Audio gaps fixed locally — re-upload needed (delete + insert)"
     },
     {
       "id": "S02900",
@@ -523,7 +538,10 @@
       "status": "scheduled",
       "publish_at": "2026-06-28T14:00:00Z",
       "type": "short",
-      "scheduled": true
+      "scheduled": true,
+      "needs_reupload_audio_fix": true,
+      "local_video_repaired": true,
+      "repair_note": "Audio gaps fixed locally — re-upload needed (delete + insert)"
     }
   ]
 }

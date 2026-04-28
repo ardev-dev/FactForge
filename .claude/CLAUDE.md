@@ -280,6 +280,9 @@ When user says "produce next video" (Short):
    - MANDATORY: segment frames must be aligned to word timestamps × 60fps (ms × 60 / 1000)
    - Shorts duration: 35–60 seconds (target 45–58s sweet spot)
 10. Visual gate: score ≥ 14/16 (visual_design.md) — revise if fails
+10.5. **🛡️ AUDIO QC GATE (MANDATORY before metadata)**: `python3 scripts/audio_qc.py [id]`
+    - Must exit 0. If fails: regenerate audio with proper BGM bed, re-render, retry.
+    - Common failure: silences in middle from vocal_humanizer pauses → fix by ensuring BGM is mixed throughout.
 11. Metadata: title × 5 variants + description + tags → output/[id]/metadata.json
 12. SEO gate: score metadata ≥ 18/22 (youtube_seo.md) — revise if fails
 13. Publish: `python3 scripts/finalize_and_upload.py [id]` — handles upload + state in one step
@@ -362,12 +365,44 @@ When user says "produce next long video" or idea starts with L:
 
 ## Video Design Rules (NEVER VIOLATE)
 
+### 🛡️ STRICT AUDIO QC GATE — verified failure on last 6 videos (Apr 2026)
+
+**Diagnosed defects in S02400–S02900:**
+- 600-1000ms dead silences at every impact segment boundary (vocal_humanizer pauses NOT covered by BGM)
+- 600-720ms silent OUTRO (no music fade — abrupt cut)
+- S02500/S02600: 3-second silent INTRO during flash (BGM never starts)
+- Verified by `scripts/audio_qc.py` — ALL 6 videos failed
+
+**MANDATORY GATE — runs after render, blocks upload:**
+```bash
+python3 scripts/audio_qc.py [video_id]   # exit 1 = block upload
+```
+
+Failure conditions (any one = REJECT):
+- ❌ Silence > 500ms anywhere (intro / middle / outro)
+- ❌ Audio/video sync drift > 100ms
+- ❌ Missing audio stream
+- ❌ True peak > -0.5 dBTP (clipping)
+- ⚠️ LUFS outside [-18, -12] = warning (allowed but flagged)
+
+**No video may be uploaded until `audio_qc.py [id]` exits 0.**
+
 ### Audio Engineering — 3-Tier System (MANDATORY for ALL videos):
 ```
 Tier 1 — BGM:    ambient_documentary.mp3 at 8% volume (Kevin MacLeod CC BY 4.0)
+                 ⚡ MUST PLAY CONTINUOUSLY from frame 0 to last frame.
+                 NEVER muted. NEVER absent. Fades in 500ms at start, fades out 800ms at end.
 Tier 2 — SFX:    context-matched, max 5 events/40s, min 3s gap between events
+                 During flash intro (frames 0-180): SFX swell MANDATORY (tension_build at 40% volume)
+                 NEVER leave the flash intro silent — it's a dead patch viewers exit.
 Tier 3 — Ambient: (future) topic-specific ambient bed
 ```
+
+**Audio continuity rule (NON-NEGOTIABLE):**
+- BGM is the FLOOR — every frame must have audio energy above -40 dB
+- Vocal humanizer pauses (600ms pre-impact, 400ms post-outro) MUST be filled by BGM
+- If BGM is missing during a vocal pause → silence detected → QC FAIL
+- The audio mixing pipeline MUST place BGM on a separate track that never ducks below -30 dB
 
 **SFX is CONTEXT-AWARE — topic determines which sounds fire:**
 | Topic | Transition | Stat | Impact | Hook |
