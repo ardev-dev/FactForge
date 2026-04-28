@@ -4,7 +4,7 @@
   "phase": "idle",
   "steps": {},
   "pending_upload_ids": [],
-  "scheduled_count": 34,
+  "scheduled_count": 33,
   "uploaded_count": 9,
   "next_action": "Ready for next 'produce' command — all videos scheduled",
   "queue_position": 43,
@@ -23,5 +23,6 @@
     "verified_at": "2026-04-28T08:27:00Z",
     "all_present": true,
     "corrected_entries": 7
-  }
+  },
+  "on_hold_count": 1
 }

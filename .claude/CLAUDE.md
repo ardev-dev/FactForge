@@ -12,6 +12,13 @@ An automated YouTube channel producing English-language educational and factual 
 
 **Channel name on YouTube: "The Fact Drop"** (internal codename: FactForge)
 **Channel ID:** UC2sASpaQ0lMbQkWW6AOLsqw
+
+**🎯 PRIMARY NICHE (chosen 2026-04-28):** "Big Industry Exposed"
+   = Big Pharma scams + Tech surveillance + Corporate fraud + Hidden history
+   Channel description: "We expose what big pharma, tech giants, and governments don't want you to know."
+   Stay within this lane — it's where the channel's content already clusters (22/43 videos).
+   Three official playlists: Big Pharma Exposed, Tech Surveillance & Privacy Theft, Corporate Greed Files.
+
 Six content domains (SAFE TRACKS ONLY — no pre-made lists, ideas are generated fresh per session):
 
 1. 🤖 **AI & Technology** — GPT, robots, future of work, tech breakthroughs
