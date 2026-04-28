@@ -113,15 +113,15 @@ def main():
             logger.info(f"  skip {fname}")
             continue
         query = seg["scene_query"]
-        url = pixabay_search(query)
+        url, _w, _h = pixabay_search(query)
         if not url:
             alt = " ".join(query.split()[:3])
-            url = pixabay_search(alt)
+            url, _w, _h = pixabay_search(alt)
         if url:
             try:
                 download(url, out_path)
                 ensure_portrait(out_path)
-                logger.info(f"  ✓ {fname}: {query[:45]}")
+                logger.info(f"  ✓ {fname}: {query[:45]} ({_w}x{_h})")
             except Exception as e:
                 logger.error(f"  ✗ {fname}: {e}")
         else:

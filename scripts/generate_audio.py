@@ -35,7 +35,7 @@ BASE = Path(__file__).parent.parent
 
 # ── Kokoro config ─────────────────────────────────────────────────────────────
 KOKORO_MODEL  = BASE / "models/kokoro/kokoro-v1.0.onnx"
-KOKORO_VOICES = BASE / "models/kokoro/voices.json"
+KOKORO_VOICES = BASE / "models/kokoro/voices-v1.0.bin"  # numpy-packed binary, NOT json
 KOKORO_VOICE  = "am_echo"    # chosen voice — clear, authoritative, commercial safe
 KOKORO_SPEED  = 1.08         # slightly faster for Shorts energy (1.0 = normal)
 

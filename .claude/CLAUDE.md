@@ -271,14 +271,24 @@ Script is written FROM verified facts — never verify after writing.
 ### Short Videos (Reels/Shorts)
 
 When user says "produce next video" (Short):
-1. Read queue.json → pick next idea → announce it → proceed WITHOUT asking for permission
+1. Read queue.json / propose 3 fresh ideas → user picks one → proceed WITHOUT asking for permission
 2. Research: web search → verify facts → save to output/[id]/research.json + sources.json
 3. Accuracy gate: score research ≥ 18/20 (fact_verification.md) — stop if fails
 4. Script: write TTS-optimized script FROM verified facts → save to output/[id]/script.json
+   - Must include: 1 hero segment + 5 flash segments + 8-12 narration segments
 5. Content gate: score script ≥ 80/100 (content_psychology.md) — revise if fails
-6. Voice: **Kokoro TTS** voice=`am_echo` speed=1.08 → save to output/[id]/audio.mp3
-   - Script: `python3 scripts/generate_audio.py [id]` — handles TTS + timestamps in one step
-   - Model: models/kokoro/kokoro-v1.0.onnx + voices-v1.0.bin (Apache 2.0, commercial safe ✅)
+6. **🎬 ONE COMMAND PIPELINE:** `python3 scripts/produce_pipeline.py [id]`
+   This runs all 9 steps automatically (no manual gluing):
+     1. Kokoro TTS → audio.mp3
+     2. Prepend 2.75s intro silence (aligns with hero+flash visuals at 60fps)
+     3. Build remotion_props.json (segments + word_timestamps)
+     4. Fetch bg_videos (Pixabay HD min 1280, lanczos portrait re-encode, no color filters)
+     5. Copy assets to public/
+     6. Remotion render + ffmpeg `-c:v copy` (preserves source colors)
+     7. audio_repair.py — BGM bed + intro SFX swell (fills all silences)
+     8. LUFS normalize to -14
+     9. audio_qc.py — exits non-zero on fail (silence > 500ms, drift > 150ms, clipping)
+   - Model: models/kokoro/kokoro-v1.0.onnx + voices-v1.0.bin (binary, NOT json)
    - NEVER use Edge TTS — Microsoft TOS prohibits commercial use on free tier
 7. Word timestamps: faster-whisper (base model, word_timestamps=True) → saved into remotion_props.json
 8. Background: assign backgroundVideo + scene_query per segment in remotion_props.json (see Segment Structure below)

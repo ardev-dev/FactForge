@@ -548,6 +548,18 @@
       "local_video_repaired": true,
       "repair_note": "Audio gaps fixed locally — re-upload needed (delete + insert)",
       "repaired_uploaded_at": "2026-04-28T07:16:34Z"
+    },
+    {
+      "id": "S02901",
+      "title": "There Is 3M Poison in 99% of Your Blood Right Now #shorts #3M #Pollution",
+      "video_file": "output/S02901/video.mp4",
+      "metadata_file": "output/S02901/metadata.json",
+      "youtube_id": "fFw5BHRmPw8",
+      "publish_at": "2026-06-30T14:00:00Z",
+      "status": "scheduled",
+      "type": "short",
+      "scheduled": true,
+      "niche": "Big Industry Exposed"
     }
   ]
 }
