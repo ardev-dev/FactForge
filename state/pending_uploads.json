@@ -574,6 +574,30 @@
       "type": "short",
       "scheduled": true,
       "niche": "Big Industry Exposed"
+    },
+    {
+      "id": "L00600",
+      "title": "How One Family Killed 500,000 Americans for $13 Billion — The Sackler Empire",
+      "video_file": "output/L00600/video.mp4",
+      "metadata_file": "output/L00600/metadata.json",
+      "youtube_id": "vjTQPHBHK9o",
+      "publish_at": "2026-05-26T14:00:00Z",
+      "status": "scheduled",
+      "type": "long",
+      "scheduled": true,
+      "uploaded_at": "2026-04-29T10:45:14Z"
+    },
+    {
+      "id": "S02903",
+      "title": "Equifax Sold Stock Before Announcing 147M Hack #shorts #Equifax #DataBreach",
+      "video_file": "output/S02903/video.mp4",
+      "metadata_file": "output/S02903/metadata.json",
+      "youtube_id": "PZfniqhUy2I",
+      "publish_at": "2026-07-04T14:00:00Z",
+      "status": "scheduled",
+      "type": "short",
+      "scheduled": true,
+      "uploaded_at": "2026-04-29T11:43:04Z"
     }
   ]
 }

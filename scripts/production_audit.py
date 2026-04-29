@@ -286,8 +286,14 @@ def audit(vid):
         if flash_n < ss["flash_min"] or flash_n > ss["flash_max"]:
             issues.append(f"flash segments {flash_n} outside [{ss['flash_min']},{ss['flash_max']}]")
 
+        # Count UNIQUE narration items (skip anti-stagnation sub-cuts which have
+        # _visual_cut_index > 0). Each script narration segment may visually split
+        # into 2-3 sub-cuts but logically counts as 1.
         narration_types = {"hook", "fact", "impact", "number", "cta"}
-        narration_n = sum(c for t, c in type_counts.items() if t in narration_types)
+        narration_n = sum(
+            1 for s in segs
+            if s.get("type") in narration_types and s.get("_visual_cut_index", 0) == 0
+        )
         if narration_n < ss["narration_min"] or narration_n > ss["narration_max"]:
             issues.append(f"narration segments {narration_n} outside [{ss['narration_min']},{ss['narration_max']}]")
 
