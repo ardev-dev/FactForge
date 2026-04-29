@@ -46,34 +46,19 @@ def render(video_id: str):
         print("❌ Remotion render failed")
         sys.exit(1)
 
-    print("\n[2/2] FFmpeg audio merge + cinematic color grade...")
-    # Cinematic color grading filter chain:
-    #   eq: slight contrast boost + brightness lift
-    #   curves: cinematic S-curve
-    #   colorbalance: warm shadows, cool highlights (cinematic look)
-    #   unsharp: subtle sharpening for clarity
-    color_grade = (
-        "eq=contrast=1.06:brightness=0.015:saturation=1.12,"
-        "curves=r='0/0 0.2/0.18 0.8/0.82 1/1':g='0/0 0.2/0.19 0.8/0.81 1/1':b='0/0 0.2/0.20 0.8/0.80 1/0.97',"
-        "colorbalance=rs=-0.03:gs=-0.01:bs=0.04:rm=0.01:gm=0:bm=-0.02:rh=-0.01:gh=0:bh=0.02,"
-        "unsharp=lx=3:ly=3:la=0.4"
-    )
+    print("\n[2/2] FFmpeg audio merge (lossless video — preserves original colors)...")
+    # Pure stream copy on video — NO re-encode, NO color grading.
+    # AI images stay exactly as Pollinations rendered them.
     ffmpeg_cmd = [
         "ffmpeg", "-y",
         "-i", str(noaudio_path),
         "-i", str(audio_path),
-        "-vf", color_grade,
-        "-c:v", "libx264",
-        "-crf", "18",                    # HIGH QUALITY
-        "-preset", "slow",               # better compression at same quality
-        "-profile:v", "high",
-        "-level", "4.2",
-        "-pix_fmt", "yuv420p",
-        "-b:v", "0",                     # CRF mode (VBR)
-        "-maxrate", "20M",               # cap for streaming
-        "-bufsize", "40M",
+        "-map", "0:v:0",
+        "-map", "1:a:0",
+        "-c:v", "copy",
         "-c:a", "aac",
         "-b:a", "256k",
+        "-movflags", "+faststart",
         "-shortest",
         str(final_path),
     ]
