@@ -1,0 +1,96 @@
+{
+  "shorts": [
+    {
+      "id": "S02400",
+      "passed": false,
+      "issues": 10,
+      "warnings": 0,
+      "issue_list": [
+        "hero count 0 ≠ 1",
+        "flash segments 0 outside [4,6]",
+        "hook has no shock word"
+      ]
+    },
+    {
+      "id": "S02500",
+      "passed": false,
+      "issues": 9,
+      "warnings": 0,
+      "issue_list": [
+        "hero count 0 ≠ 1",
+        "flash segments 0 outside [4,6]",
+        "hook has no shock word"
+      ]
+    },
+    {
+      "id": "S02600",
+      "passed": false,
+      "issues": 8,
+      "warnings": 0,
+      "issue_list": [
+        "hero count 0 ≠ 1",
+        "flash segments 0 outside [4,6]",
+        "script missing 'Subscribe' ask"
+      ]
+    },
+    {
+      "id": "S02700",
+      "passed": false,
+      "issues": 11,
+      "warnings": 0,
+      "issue_list": [
+        "hero count 0 ≠ 1",
+        "flash segments 0 outside [4,6]",
+        "narration segments 4 outside [7,12]"
+      ]
+    },
+    {
+      "id": "S02800",
+      "passed": false,
+      "issues": 11,
+      "warnings": 0,
+      "issue_list": [
+        "hero count 0 ≠ 1",
+        "flash segments 0 outside [4,6]",
+        "narration segments 4 outside [7,12]"
+      ]
+    },
+    {
+      "id": "S02900",
+      "passed": false,
+      "issues": 11,
+      "warnings": 0,
+      "issue_list": [
+        "hero count 0 ≠ 1",
+        "flash segments 0 outside [4,6]",
+        "narration segments 4 outside [7,12]"
+      ]
+    },
+    {
+      "id": "S02901",
+      "passed": false,
+      "issues": 2,
+      "warnings": 0,
+      "issue_list": [
+        "video bitrate 4925k < 5000k",
+        "script missing 'Subscribe' ask"
+      ]
+    },
+    {
+      "id": "S02902",
+      "passed": true,
+      "issues": 0,
+      "warnings": 0,
+      "issue_list": []
+    }
+  ],
+  "long": [
+    {
+      "id": "L00600",
+      "passed": true,
+      "issues": 0,
+      "warnings": 0,
+      "issue_list": []
+    }
+  ]
+}
