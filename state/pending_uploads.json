@@ -623,6 +623,32 @@
       "type": "long",
       "scheduled": true,
       "uploaded_at": "2026-04-30T06:05:20Z"
+    },
+    {
+      "id": "S02905",
+      "title": "Ozempic Costs $5 to Make. They Charge Americans $968. #shorts #Ozempic #BigPharma",
+      "video_file": "output/S02905/video.mp4",
+      "metadata_file": "output/S02905/metadata.json",
+      "youtube_id": "lUTy778x0pg",
+      "status": "uploaded",
+      "privacy_status": "public",
+      "published_at": "2026-04-30T10:19:26Z",
+      "type": "short",
+      "niche": "Big Industry Exposed",
+      "note": "Published immediately as replacement for deleted L00200"
+    },
+    {
+      "id": "L00800",
+      "title": "Bayer Knew Roundup Caused Cancer for 30 Years — $11 Billion Couldn't Hide It",
+      "video_file": "output/L00800/video.mp4",
+      "metadata_file": "output/L00800/metadata.json",
+      "youtube_id": "EfCwO_hEhkw",
+      "status": "uploaded",
+      "privacy_status": "public",
+      "published_at": "2026-04-30T10:40:59Z",
+      "type": "long",
+      "niche": "Big Industry Exposed",
+      "note": "Public replacement for deleted L00200"
     }
   ]
 }
