@@ -76,6 +76,13 @@ Target audience: Global English speakers curious about science, economics, and h
 - Racial justice framing, apartheid, occupation, ethnic cleansing language
 - Any topic that requires taking a political or religious side
 
+**ENFORCEMENT (verified 2026-04-30):** if banned content slips through to
+upload, DELETE FROM YOUTUBE IMMEDIATELY — do NOT just unschedule. Verified
+case: L00200 was unscheduled via videos.update(publishAt=null) yet YouTube
+published it anyway (3 views). Only `yt.videos().delete(id=...)` is reliable.
+Then mark `status: 'deleted_policy_violation'` in pending_uploads.json and
+remove `output/[id]/` artifacts.
+
 ---
 
 ## How to Resume Any Session
