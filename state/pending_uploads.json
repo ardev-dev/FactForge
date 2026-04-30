@@ -347,11 +347,12 @@
     {
       "id": "L00200",
       "title": "800 Years of Forgotten Genius: How Muslim Scientists Built the Modern World",
-      "youtube_id": "Nt_xKruntQk",
-      "status": "on_hold_policy_violation",
+      "status": "deleted_policy_violation",
       "type": "long",
       "policy_note": "Religious content — Islamic Golden Age. Banned per CLAUDE.md. Unscheduled on YouTube.",
-      "publish_at_original": "2026-04-28T14:00:00Z"
+      "publish_at_original": "2026-04-28T14:00:00Z",
+      "deleted_at": "2026-04-30T08:55:00Z",
+      "old_youtube_id": "Nt_xKruntQk"
     },
     {
       "id": "S01220",
