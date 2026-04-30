@@ -661,6 +661,18 @@
       "type": "long",
       "scheduled": true,
       "uploaded_at": "2026-04-30T12:29:21Z"
+    },
+    {
+      "id": "S02906",
+      "title": "Hertz Reported 364 Customers as Thieves — $168M Settlement #shorts #Hertz #Fraud",
+      "video_file": "output/S02906/video.mp4",
+      "metadata_file": "output/S02906/metadata.json",
+      "youtube_id": "uMOUT_3UZNM",
+      "publish_at": "2026-07-08T18:00:00Z",
+      "status": "scheduled",
+      "type": "short",
+      "scheduled": true,
+      "uploaded_at": "2026-04-30T12:47:30Z"
     }
   ]
 }

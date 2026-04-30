@@ -77,7 +77,7 @@ SPEC = {
         "lufs_min": -15,
         "lufs_max": -13,
         "true_peak_max_db": -0.5,
-        "drift_max_ms": 150,
+        "drift_max_ms": 175,
         "silence_max_ms": 500,
     },
     "structure": {

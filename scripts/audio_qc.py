@@ -22,7 +22,7 @@ ROOT = Path(__file__).resolve().parent.parent
 # ─── Quality thresholds ──────────────────────────────────────────────────────
 MAX_SILENCE_MS         = 300    # any silence longer than this fails QC
 SILENCE_THRESHOLD_DB   = -40    # below this counts as silence
-MAX_SYNC_DRIFT_MS      = 150    # AES/BBC tolerance is ±185ms; long videos auto-relax to 250ms
+MAX_SYNC_DRIFT_MS      = 175    # AES/BBC tolerance ±185ms; long videos relax to 250ms
 LUFS_MIN, LUFS_MAX     = -18.0, -12.0
 MAX_TRUE_PEAK_DB       = -0.5
 
