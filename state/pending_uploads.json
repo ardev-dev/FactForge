@@ -649,6 +649,18 @@
       "type": "long",
       "niche": "Big Industry Exposed",
       "note": "Public replacement for deleted L00200"
+    },
+    {
+      "id": "L00900",
+      "title": "How Wells Fargo Secretly Opened 3.5 Million Fake Accounts in Customer Names",
+      "video_file": "output/L00900/video.mp4",
+      "metadata_file": "output/L00900/metadata.json",
+      "youtube_id": "QtxPstTro74",
+      "publish_at": "2026-06-09T18:00:00Z",
+      "status": "scheduled",
+      "type": "long",
+      "scheduled": true,
+      "uploaded_at": "2026-04-30T12:29:21Z"
     }
   ]
 }
