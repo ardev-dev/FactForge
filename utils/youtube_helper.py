@@ -43,7 +43,8 @@ STATE_DIR  = BASE_DIR / "state"
 SCOPES             = ["https://www.googleapis.com/auth/youtube", "https://www.googleapis.com/auth/youtube.force-ssl"]
 SHORT_EVERY_N_DAYS = 2
 LONG_EVERY_N_DAYS  = 7
-PUBLISH_TIME       = "14:00:00Z"   # 14:00 UTC = 17:00 Riyadh
+PUBLISH_TIME       = "18:00:00Z"   # 18:00 UTC = 1pm EST (peak Shorts feed) = 21:00 Riyadh
+PUBLISH_HOUR       = 18
 
 
 # ─── Quota helpers ────────────────────────────────────────────────────────────
@@ -339,9 +340,9 @@ def get_next_publish_date(video_type: str = "short") -> str:
     else:
         base = last_date + timedelta(days=interval)
 
-    # Force publish time to 14:00:00 UTC
-    publish_dt = base.replace(hour=14, minute=0, second=0, microsecond=0, tzinfo=timezone.utc)
-    return publish_dt.strftime("%Y-%m-%dT14:00:00Z")
+    # Force publish time to 18:00:00 UTC (peak Shorts feed window: 1-4pm EST)
+    publish_dt = base.replace(hour=PUBLISH_HOUR, minute=0, second=0, microsecond=0, tzinfo=timezone.utc)
+    return publish_dt.strftime(f"%Y-%m-%dT{PUBLISH_HOUR:02d}:00:00Z")
 
 
 # ─── State management ─────────────────────────────────────────────────────────

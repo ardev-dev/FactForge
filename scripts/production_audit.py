@@ -121,6 +121,11 @@ SPEC = {
         "source_citation_required": True,
         "tags_min": 8,
         "tags_max": 15,
+        # Rule 1 (2026-04-30): every short title must contain at least 2 numbers
+        # in contrast format. Verified from EpiPen ($7/$608, 100% ER) vs vague
+        # titles (Wealth Gap, 0% ER). Numbers can be digits, written-out
+        # ($7, $608), or quantitative words (million, billion, percent).
+        "title_min_numbers": 2,
     },
 }
 
@@ -358,6 +363,20 @@ def audit(vid):
             issues.append(f"title length {len(title)} outside [{sm['title_min_chars']},{sm['title_max_chars']}]")
         if sm["shorts_hashtag_required"] and "#shorts" not in title.lower():
             issues.append("title missing #shorts")
+        # Rule 1: two-number contrast formula
+        # Count digit clusters (allowing $X, 147M, 35%, etc) AND written numbers
+        digit_count = len(re.findall(r"\$?\d[\d,.]*[KMBkmb%]?", title))
+        word_numbers = re.findall(
+            r"\b(zero|one|two|three|four|five|six|seven|eight|nine|ten|"
+            r"eleven|twelve|thirteen|twenty|thirty|forty|fifty|sixty|seventy|"
+            r"eighty|ninety|hundred|thousand|million|billion|trillion|percent|"
+            r"half|quarter|dozen)\b", title, re.IGNORECASE
+        )
+        # Each unique word-number group counts as +1 (capped at 2 to prevent gaming)
+        total_numbers = digit_count + min(2, len(word_numbers))
+        metrics["title_numbers"] = total_numbers
+        if total_numbers < sm.get("title_min_numbers", 2):
+            issues.append(f"title has {total_numbers} numbers — need ≥{sm['title_min_numbers']} (two-number contrast rule)")
         ht_count = metrics["title_hashtags"]
         if ht_count < sm["title_hashtags_min"] or ht_count > sm["title_hashtags_max"]:
             issues.append(f"title hashtags {ht_count} outside [{sm['title_hashtags_min']},{sm['title_hashtags_max']}]")

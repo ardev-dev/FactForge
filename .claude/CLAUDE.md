@@ -25,6 +25,63 @@ User-approved reference quality. Every new short MUST match or exceed it.
 Enforced automatically by `scripts/production_audit.py` (step 11/11 in pipeline).
 If the audit fails, upload is BLOCKED.
 
+---
+
+## 📊 7 DATA-DRIVEN PRODUCTION RULES (locked 2026-04-30 from channel analytics)
+
+After analyzing all 11 published videos and YouTube Studio Research suggestions,
+these 7 rules are MANDATORY for every new production:
+
+### Rule 1 — TWO-NUMBER TITLE FORMULA
+The single highest-engagement video (EpiPen, 100% ER) used:
+`"$7 to Make. They Charge $608."` — TWO concrete numbers in contrast.
+Single-number or vague titles ("Wealth Gap") got <2% ER.
+- Every short title MUST contain TWO specific numbers in contrast format
+- Best patterns: `"$X cost. $Y price."` / `"X people. $Y profit."` / `"X% problem. Y% benefit."`
+
+### Rule 2 — NICHE BALANCE: 50/30/20
+Channel data shows pharma engages best, tech engages worst:
+- pharma  (EpiPen, Hepatitis, Sackler): avg ER **50%**
+- corp/wealth (Richest, Boeing, 3M):    avg ER **20%**
+- tech (Clearview, OpenAI, AGI):        avg ER  **0%** ← oversaturated on YT
+
+Production ratio for next 30 videos: **5 pharma : 3 corp : 2 tech**.
+
+### Rule 3 — CONSPIRACY FRAMING FOR HOOKS
+Buried Record (4.5K subs, our peer) hit 179K views with framing:
+`"All Got Rich at the Same Time"` / `"All Used the Same Method"` / `"Right After the [...]"`
+- Hook should suggest a HIDDEN PATTERN, not a single fact
+- Use phrases: "All [verb] the same way" / "Same time. Same method." / "It's not coincidence."
+
+### Rule 4 — SEARCH QUERIES VERBATIM IN TITLE
+YouTube Studio Research showed our audience searches:
+- "top 10 richest man in the world"
+- "top trillionaires in the world"
+- "wealth distribution in the world"
+- "richest families on earth"
+
+Put these EXACT phrases in titles (not just tags). Match search ranking directly.
+
+### Rule 5 — PUBLISH TIME SHIFT: 18:00 UTC
+14:00 UTC (10am EST) misses YouTube's peak Shorts feed window.
+- New default: **18:00 UTC** (1pm EST, 9pm KSA)
+- Peak Shorts feed activity: 1-4pm EST = 18:00-21:00 UTC
+- Update `utils/youtube_helper.get_next_publish_date()` to use 18:00.
+
+### Rule 6 — SUBSCRIBE CTA WITH URGENCY/CURIOSITY
+Current passive CTA produced 0 subscribers from 18 views.
+Replace with one of these proven formulas (rotate per video):
+- `"Subscribe — only 0.1% of viewers do."` (peer pressure)
+- `"Follow before this gets demonetized."` (urgency)
+- `"Subscribe to see the next 5 industries we expose."` (specific promise)
+- `"Hit follow if this surprised you."` (low-friction ask)
+
+### Rule 7 — COLD START PATIENCE: 14 DAYS
+Channel analysis 2026-04-30: videos published in past 9 days have 0-1 view.
+Videos older than 9 days have 1-5 views. Don't judge a video's performance
+before **14 days** post-publication. The algorithm needs time to find the
+audience cluster.
+
 **S02902 actual measurements (the floor):**
 ```
 Video:    1080×1920 @ 60fps · 7,420 kbps · h264 high profile · 54.1s duration
