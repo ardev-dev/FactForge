@@ -598,6 +598,30 @@
       "type": "short",
       "scheduled": true,
       "uploaded_at": "2026-04-29T11:43:04Z"
+    },
+    {
+      "id": "S02904",
+      "title": "5 Men Doubled Their Wealth While 5 Billion Got Poorer #shorts #Wealth #Inequality",
+      "video_file": "output/S02904/video.mp4",
+      "metadata_file": "output/S02904/metadata.json",
+      "youtube_id": "M5iNwkHfkxs",
+      "publish_at": "2026-07-06T14:00:00Z",
+      "status": "scheduled",
+      "type": "short",
+      "scheduled": true,
+      "uploaded_at": "2026-04-30T05:25:42Z"
+    },
+    {
+      "id": "L00700",
+      "title": "The Richest Families on Earth All Got Rich the Same Way — And It's Not Hard Work",
+      "video_file": "output/L00700/video.mp4",
+      "metadata_file": "output/L00700/metadata.json",
+      "youtube_id": "L2sQjnwjlUU",
+      "publish_at": "2026-06-02T14:00:00Z",
+      "status": "scheduled",
+      "type": "long",
+      "scheduled": true,
+      "uploaded_at": "2026-04-30T06:05:20Z"
     }
   ]
 }

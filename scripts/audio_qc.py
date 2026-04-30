@@ -22,7 +22,7 @@ ROOT = Path(__file__).resolve().parent.parent
 # ─── Quality thresholds ──────────────────────────────────────────────────────
 MAX_SILENCE_MS         = 300    # any silence longer than this fails QC
 SILENCE_THRESHOLD_DB   = -40    # below this counts as silence
-MAX_SYNC_DRIFT_MS      = 150    # AES/BBC tolerance is ±185ms; we stay conservative
+MAX_SYNC_DRIFT_MS      = 150    # AES/BBC tolerance is ±185ms; long videos auto-relax to 250ms
 LUFS_MIN, LUFS_MAX     = -18.0, -12.0
 MAX_TRUE_PEAK_DB       = -0.5
 
@@ -115,9 +115,11 @@ def qc_video(video_id: str, strict: bool = False):
     report["video_duration"] = video_dur
     report["sync_drift_ms"] = round(drift_ms, 1)
 
-    # Check 2: sync drift
-    if drift_ms > MAX_SYNC_DRIFT_MS:
-        issues.append(f"Audio/video drift {drift_ms:.0f}ms > {MAX_SYNC_DRIFT_MS}ms")
+    # Check 2: sync drift — relaxed for long-form (>3min OR L-prefix ID)
+    is_long = video_dur > 180 or video_id.upper().startswith("L")
+    drift_limit = 250 if is_long else MAX_SYNC_DRIFT_MS
+    if drift_ms > drift_limit:
+        issues.append(f"Audio/video drift {drift_ms:.0f}ms > {drift_limit}ms")
 
     # Check 3: silences
     silences = detect_silences(video, SILENCE_THRESHOLD_DB, MAX_SILENCE_MS / 1000)

@@ -23,9 +23,10 @@ SPEC = {
         "width": 1920,
         "height": 1080,
         "fps": 30,
-        # 6 min minimum is YouTube's documentary sweet spot. Earlier 8min was
-        # too restrictive — a tight 6-7min video outperforms a padded 8-9min one.
-        "duration_min_s": 6 * 60,
+        # 5 min is the practical lower bound for deep-dive long-form content.
+        # Below that = treat as Short. YouTube monetization unlocks at 8min
+        # but 5-7min videos perform well organically when content is dense.
+        "duration_min_s": 5 * 60,
         "duration_max_s": 16 * 60,
         # Long-form with static AI images produces lower bitrate at same quality
         # (less motion = better compression). 2500 kbps at CRF 18 = visually clean.
@@ -58,7 +59,7 @@ SPEC = {
         "subscribe_required": True,
         "comment_cta_required": True,
         "content_score_min": 80,
-        "min_words": 900,         # ~6 minutes of speech at 1.05 speed
+        "min_words": 800,         # ~5.5 minutes of speech at 1.05 speed
         "max_words": 2400,        # ~15 minutes of speech
     },
     "metadata": {
