@@ -34,3 +34,4 @@ video/remotion-project/node_modules/
 models/
 *.onnx
 *.bin
+config/social_credentials.json
