@@ -1,7 +1,9 @@
 export const FONTS = {
-  DISPLAY: "'Bebas Neue', 'Impact', sans-serif",
-  BODY:    "'DM Sans', 'Arial', sans-serif",
-  MONO:    "'Space Mono', 'Courier New', monospace",
+  DISPLAY:  "'Anton', 'Bebas Neue', 'Impact', sans-serif",   // bolder than Bebas
+  BODY:     "'Inter', 'DM Sans', 'Arial', sans-serif",       // clearer small-size
+  MONO:     "'Space Mono', 'Courier New', monospace",
+  SHOCK:    "'Bangers', 'Anton', 'Impact', sans-serif",      // hook + CTA emphasis
+  HEADLINE: "'Oswald', 'Anton', 'Impact', sans-serif",       // chapter titles
 } as const;
 
 export const FONT_SIZES = {

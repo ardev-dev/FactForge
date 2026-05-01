@@ -9,8 +9,12 @@
     "build": "npx remotion bundle"
   },
   "dependencies": {
+    "@fontsource/anton": "^5.2.7",
+    "@fontsource/bangers": "^5.2.8",
     "@fontsource/bebas-neue": "^5.2.7",
     "@fontsource/dm-sans": "^5.2.8",
+    "@fontsource/inter": "^5.2.8",
+    "@fontsource/oswald": "^5.2.8",
     "@fontsource/space-mono": "^5.2.9",
     "@remotion/cli": "4.0.246",
     "@remotion/media-utils": "4.0.246",

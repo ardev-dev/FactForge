@@ -668,9 +668,19 @@ In Script Writing (additional humanization):
 - **Image resolution**: 1920×1080 ONLY — never render images at wrong size
 - **Video quality**: CRF 18 + preset slow + maxrate 20M — MANDATORY for no pixelation
 - **Color grading**: applied in ffmpeg step — contrast 1.06, warmth curves, colorbalance warm-shadows/cool-highlights, unsharp 0.4
-- **Ambient music**: Kevin MacLeod "Perspectives" (CC BY 4.0) at 8% volume, looped to match audio duration
-  - Cached at: assets/ambient_documentary.mp3
-  - Attribution required in video description: Music by Kevin MacLeod (incompetech.com)
+- **Ambient music**: 21+ Kevin MacLeod tracks (CC BY 4.0) at 8% volume in `assets/music/`
+  - Default: `Perspectives.mp3` (cached as `assets/ambient_documentary.mp3`)
+  - Pool: Dark Walk, Hidden Agenda, Investigations, Sneaky Adventure, Spy Glass,
+    Heart of the Beast, Pressure Cooker, Aggressor, Crypto, etc.
+  - Future: rotate music per video to avoid rewatch fatigue
+  - **MANDATORY attribution in every description**:
+    `Music by Kevin MacLeod (incompetech.com) — Licensed under CC BY 4.0`
+- **SFX library** (all 100% free + commercial-OK):
+  - 18 ambient loops in `audio_engineering/assets/ambient/` (rain, wind, ocean,
+    footsteps, hospital_beeps, factory_industrial, lab_glassware, etc.)
+  - 20 transition/impact/sting SFX in `audio_engineering/assets/sfx_extras/`
+    (whoosh, glitch, power_up, impact_heavy, sting_dramatic, alert_warning, etc.)
+  - All synthesized via numpy in `audio_engineering/build_*.py` — we own full rights
 
 ### Stickman Animation (for both Shorts and Long):
 - Use the `StickmanScene` Remotion component for segments that explain a concept or tell a story

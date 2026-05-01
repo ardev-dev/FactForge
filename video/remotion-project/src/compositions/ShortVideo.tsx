@@ -1,6 +1,10 @@
 import "@fontsource/bebas-neue";
 import "@fontsource/dm-sans/700.css";
 import "@fontsource/space-mono/700.css";
+import "@fontsource/anton";
+import "@fontsource/oswald/700.css";
+import "@fontsource/bangers";
+import "@fontsource/inter/700.css";
 
 import React from "react";
 import {
