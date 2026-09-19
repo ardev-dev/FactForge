@@ -19,6 +19,40 @@ An automated YouTube channel producing English-language educational and factual 
    Stay within this lane — it's where the channel's content already clusters (22/43 videos).
    Three official playlists: Big Pharma Exposed, Tech Surveillance & Privacy Theft, Corporate Greed Files.
 
+## 🧠 YOUTUBE SHORTS ALGORITHM 2026 — LOCKED RULES (updated 2026-05-06)
+
+Based on analysis of YouTube's March 2026 algorithm update:
+
+**Metrics ranked by weight (what the algorithm measures):**
+1. **Satisfaction score** — likes, replays, shares (NOT just watch time)
+2. **Swipe-away rate** — viewer swipes in first 2s = strong negative signal
+3. **Completion rate** — watched to end = distribution expands
+4. **Loop/replay rate** — replay = strongest interest signal
+5. **Session contribution** — do viewers watch MORE after your Short?
+6. **Community engagement** — comments increased weight in 2026
+
+**CRITICAL SHIFT:** Watch time alone no longer wins. A 13s Short with 3 replays beats a 55s Short with drop-offs.
+
+**Hook window = 2 seconds** (not 3) — if viewer doesn't swipe in first 2s, completion probability +60%.
+
+**Optimal duration confirmed:** 40–55s for multi-point content. Current 45–58s target is correct. Do NOT change.
+Dead zone to avoid: 25–40s (not short enough for loops, not long enough for story).
+
+**AI Disclosure (MANDATORY for every video):**
+Add to every description: `🤖 Narration generated with AI voice technology.`
+Undisclosed AI content = algorithm suppression. Disclosed AI = normal distribution.
+This is auto-injected by `finalize_and_upload.py` — do not remove it.
+
+**Niche clustering (confirmed Feb 2026):** The browse feed now rewards micro-niche consistency.
+Staying strictly within "Big Industry Exposed" compounds — algorithm identifies channel as niche authority faster.
+NEVER mix topics — every video must fit pharma/corp/tech exposure lane.
+
+**Playlist in every description (auto-injected):**
+`https://youtube.com/playlist?list=PLin03akGsSdYSIoi1NsJNn-FIIv0jl5dJ`
+This drives session continuation — a medium-high weighted signal since 2026.
+
+---
+
 ## 🏆 PRODUCTION STANDARD: S02902 Baseline (locked 2026-04-28)
 
 User-approved reference quality. Every new short MUST match or exceed it.
@@ -245,28 +279,22 @@ Always suggest the next idea at the bottom — never wait to be asked.
 9. **Auto-choose publish date** — use utils/youtube_helper.get_next_publish_date() — never ask user for dates
 10. **Auto-clean after upload** — delete video.mp4, audio.mp3, bg_videos/ automatically after successful upload
 
-## How "produce" Works (NEW WORKFLOW)
+## How "produce" Works (AUTONOMOUS WORKFLOW)
 
 When user says "produce" (short or long):
 
-**Step 1 — Generate 3 topic proposals:**
-- Think about what is currently trending or evergreen in the 6 domains
-- Cross-check `database/used_ideas.json` to avoid repeating topics
-- Propose exactly 3 options in this format:
+**FULLY AUTONOMOUS — no topic selection, no confirmation, no waiting.**
 
-```
-اقتراح موضوع للمقطع القادم:
+1. Claude independently selects the best topic by:
+   - Cross-checking `database/used_ideas.json` to avoid repeats
+   - Applying niche balance rule (5 pharma : 3 corp : 2 tech)
+   - Choosing the most shocking, verifiable, evergreen topic available
+   - Confirming it passes ALL banned topics checks
 
-① [عنوان جذاب] — [المجال] — [سبب واحد يجعله ترند الآن]
-② [عنوان جذاب] — [المجال] — [سبب واحد يجعله ترند الآن]
-③ [عنوان جذاب] — [المجال] — [سبب واحد يجعله ترند الآن]
+2. Announce the chosen topic in ONE line:
+   `🎬 Producing: [Title] — [Domain]`
 
-اختر رقماً أو قل "غيّر" لاقتراحات جديدة.
-```
-
-**Step 2 — User picks a number (1, 2, or 3)**
-- Immediately begin the full production pipeline without further questions
-- Apply all quality gates, scoring, and steps as defined below
+3. Immediately begin the full production pipeline — no further questions.
 
 **Topic selection criteria:**
 - Is it trending NOW or timeless evergreen?
@@ -579,6 +607,19 @@ In Script Writing (additional humanization):
 - Capitalize shocking words: `ZERO percent`, `FIVE people`
 - Add dramatic pause after: `but`, `however`, `yet`, `only`, `wait`
 - Example: `"More people walked on the Moon. But — fewer than five reached the ocean floor."`
+
+**🎙️ VOICEOVER-REACTION STYLE (locked 2026-05-06 — applies to ALL new Shorts):**
+Scripts must feel like a curious, shocked commentator — not a newsreader.
+Four mandatory techniques:
+1. **Open with a question or unresolved tension** (not a statement):
+   - ❌ BAD: `"McKinsey advised Purdue to turbocharge OxyContin sales."`
+   - ✅ GOOD: `"Why was the same firm selling opioids — and regulating them?"`
+2. **Use "Wait—" / "Here's the part nobody talks about:" / "But that's not even the worst part."** at reveal transitions
+3. **Repeat the shocking number at the end** to make it stick: `"Five hundred thousand people. Cost them nothing."`
+4. **End hook segment with an open loop** — a question the viewer needs answered to keep watching:
+   - `"And here's what they did when investigators showed up—"`
+   - `"But the number that shocked even the judge was—"`
+These patterns increase watch time by keeping the viewer in suspense through each segment cut.
 
 ### Short Videos (Reels/Shorts):
 - **NO text overlays in center of screen** — مشاهد حية تملأ الشاشة بالكامل

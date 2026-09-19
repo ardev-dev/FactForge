@@ -101,32 +101,32 @@ def _build_script_tts_with_pauses(script_data: dict) -> list:
         seg_type = seg.get("type", "fact")
         role = _detect_segment_role(text, seg_type)
 
-        # Speed: hook=faster, stat=slower, outro=slower, rest=normal
+        # Speed: voiceover-reaction style — questions fast, reveals slow, stats clear
         speed_map = {
-            "hook":      1.15,   # +10% urgency
-            "climax":    0.95,   # -5% weight
-            "stat":      0.97,   # slightly slower for numbers to land
-            "outro":     0.92,   # -8% trustworthy close
-            "explainer": 1.05,   # normal
+            "hook":      1.10,   # slightly urgent — question/tease, not rushing
+            "climax":    0.93,   # heavier drop for shocking reveals
+            "stat":      0.95,   # slower — let numbers breathe
+            "outro":     0.90,   # trustworthy close
+            "explainer": 1.02,   # conversational, almost natural pace
         }
-        speed = speed_map.get(role, 1.05)
+        speed = speed_map.get(role, 1.02)
 
-        # Pre-pause: before climax moments
+        # Pre-pause: dramatic beat before reveals and trigger words
         pre_pause_ms = 0
         if role == "climax":
-            pre_pause_ms = 600   # 0.6s before the shocking stat
+            pre_pause_ms = 750   # longer beat before shocking reveal
         elif any(w in text.lower() for w in PAUSE_TRIGGERS):
-            pre_pause_ms = 350
+            pre_pause_ms = 450   # bigger pause on "but / wait / however"
 
-        # Post-pause: after power words that need to land
+        # Post-pause: after power words and stats — let them land
         post_pause_ms = 0
         text_lower = text.lower()
         if any(w in text_lower for w in POWER_WORDS):
-            post_pause_ms = 250
+            post_pause_ms = 350  # longer — voiceover style lets facts breathe
 
-        # Last segment: longer pause for outro feel
+        # Last segment: outro pause
         if i == total - 1:
-            post_pause_ms = max(post_pause_ms, 400)
+            post_pause_ms = max(post_pause_ms, 500)
 
         result.append({
             "text": text,

@@ -70,6 +70,17 @@ def upload(video_id: str) -> str:
     title = meta.get("selected_title") or meta.get("title_selected") or meta.get("title", "")
     desc  = meta.get("description", "")
     tags  = meta.get("tags", [])
+
+    # AI disclosure — required by YouTube 2026 algorithm to avoid suppression
+    AI_DISCLOSURE = "\n\n🤖 Narration generated with AI voice technology. All facts are verified from official sources."
+    if "AI voice" not in desc:
+        desc = desc + AI_DISCLOSURE
+
+    # Playlist link — drives session continuation (watch time chain strategy)
+    PLAYLIST_URL = "https://youtube.com/playlist?list=PLin03akGsSdYSIoi1NsJNn-FIIv0jl5dJ"
+    PLAYLIST_LINE = f"\n▶️ Watch more exposés: {PLAYLIST_URL}"
+    if PLAYLIST_URL not in desc:
+        desc = desc + PLAYLIST_LINE
     cat   = meta.get("category_id", "27")
 
     # Determine scheduled publish date

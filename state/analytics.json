@@ -1,30 +1,30 @@
 {
-  "last_fetched": "2026-04-28T05:21:59Z",
-  "total_videos_analyzed": 43,
+  "last_fetched": "2026-05-06T05:32:27Z",
+  "total_videos_analyzed": 56,
   "channel_totals": {
-    "total_views": 45,
+    "total_views": 53,
     "total_subs_gained": 0
   },
   "videos": [
     {
       "id": "L00100",
       "youtube_id": "EhMCQu_v0vA",
-      "title": "Richest People on Earth — From Least to Most Wealthy (2026)",
+      "title": "The Top 10 Richest Men in the World — From Least to Most Wealthy 2026",
       "type": "long",
       "publish_at": "2026-04-14T15:00:00+00:00",
       "stats": {
-        "views": 3,
+        "views": 4,
         "avg_view_pct": 0.0,
         "avg_view_duration_sec": 0,
         "likes": 0,
-        "comments": 1,
+        "comments": 2,
         "subs_gained": 0,
         "ctr_pct": 0.0,
         "impressions": 0
       },
       "retention_grade": "D",
       "hook_formula": null,
-      "performance_score": 53
+      "performance_score": 71
     },
     {
       "id": "S01117",
@@ -37,7 +37,7 @@
         "avg_view_pct": 0.0,
         "avg_view_duration_sec": 0,
         "likes": 0,
-        "comments": 1,
+        "comments": 2,
         "subs_gained": 0,
         "ctr_pct": 0.0,
         "impressions": 0
@@ -57,7 +57,7 @@
         "avg_view_pct": 0.0,
         "avg_view_duration_sec": 0,
         "likes": 0,
-        "comments": 0,
+        "comments": 1,
         "subs_gained": 0,
         "ctr_pct": 0.0,
         "impressions": 0
@@ -73,18 +73,18 @@
       "type": "short",
       "publish_at": "2026-04-15T14:00:00+00:00",
       "stats": {
-        "views": 1,
+        "views": 2,
         "avg_view_pct": 0.0,
         "avg_view_duration_sec": 0,
         "likes": 1,
-        "comments": 1,
+        "comments": 2,
         "subs_gained": 0,
         "ctr_pct": 0.0,
         "impressions": 0
       },
       "retention_grade": "D",
       "hook_formula": null,
-      "performance_score": 29
+      "performance_score": 47
     },
     {
       "id": "S01110",
@@ -97,7 +97,7 @@
         "avg_view_pct": 0.0,
         "avg_view_duration_sec": 0,
         "likes": 0,
-        "comments": 0,
+        "comments": 1,
         "subs_gained": 0,
         "ctr_pct": 0.0,
         "impressions": 0
@@ -117,7 +117,7 @@
         "avg_view_pct": 0.0,
         "avg_view_duration_sec": 0,
         "likes": 0,
-        "comments": 0,
+        "comments": 1,
         "subs_gained": 0,
         "ctr_pct": 0.0,
         "impressions": 0
@@ -137,7 +137,7 @@
         "avg_view_pct": 0.0,
         "avg_view_duration_sec": 0,
         "likes": 0,
-        "comments": 0,
+        "comments": 1,
         "subs_gained": 0,
         "ctr_pct": 0.0,
         "impressions": 0
@@ -157,7 +157,7 @@
         "avg_view_pct": 0.0,
         "avg_view_duration_sec": 0,
         "likes": 0,
-        "comments": 0,
+        "comments": 1,
         "subs_gained": 0,
         "ctr_pct": 0.0,
         "impressions": 0
@@ -173,18 +173,18 @@
       "type": "short",
       "publish_at": "2026-04-29T14:00:00+00:00",
       "stats": {
-        "views": 0,
+        "views": 1,
         "avg_view_pct": 0.0,
         "avg_view_duration_sec": 0,
-        "likes": 0,
-        "comments": 0,
+        "likes": 1,
+        "comments": 1,
         "subs_gained": 0,
         "ctr_pct": 0.0,
         "impressions": 0
       },
       "retention_grade": "D",
       "hook_formula": null,
-      "performance_score": 0
+      "performance_score": 29
     },
     {
       "id": "S01215",
@@ -269,7 +269,7 @@
     {
       "id": "L00016",
       "youtube_id": "mlYuvKBbuOA",
-      "title": "The Wealth Gap: How the Richest 1% Came to Own More Than the Bottom 50% Combined",
+      "title": "How the Top 1% Came to Own More Than 4.5 Billion People — The Wealth Gap",
       "type": "long",
       "publish_at": "2026-04-21T14:00:00+00:00",
       "stats": {
@@ -277,7 +277,7 @@
         "avg_view_pct": 0.0,
         "avg_view_duration_sec": 0,
         "likes": 0,
-        "comments": 0,
+        "comments": 1,
         "subs_gained": 0,
         "ctr_pct": 0.0,
         "impressions": 0
@@ -487,31 +487,11 @@
       "performance_score": 29
     },
     {
-      "id": "L00200",
-      "youtube_id": "Nt_xKruntQk",
-      "title": "800 Years of Forgotten Genius: How Muslim Scientists Built the Modern World",
-      "type": "long",
-      "publish_at": "2026-04-28T14:00:00Z",
-      "stats": {
-        "views": 3,
-        "avg_view_pct": 0.0,
-        "avg_view_duration_sec": 0,
-        "likes": 0,
-        "comments": 0,
-        "subs_gained": 0,
-        "ctr_pct": 0.0,
-        "impressions": 0
-      },
-      "retention_grade": "D",
-      "hook_formula": null,
-      "performance_score": 53
-    },
-    {
       "id": "S01220",
       "youtube_id": "z8VOXORHURo",
       "title": "He Transferred $25 Million to Criminals — Because of a Fake Video Call",
       "type": "short",
-      "publish_at": "2026-05-29T14:00:00Z",
+      "publish_at": "2026-05-29T18:00:00Z",
       "stats": {
         "views": 3,
         "avg_view_pct": 0.0,
@@ -531,7 +511,7 @@
       "youtube_id": "74I69vfNj4c",
       "title": "S00550",
       "type": "short",
-      "publish_at": "2026-05-31T14:00:00Z",
+      "publish_at": "2026-05-31T18:00:00Z",
       "stats": {
         "views": 4,
         "avg_view_pct": 0.0,
@@ -551,7 +531,7 @@
       "youtube_id": "VMTGuDE9uHI",
       "title": "From Shells to Bitcoin: The Shocking History of Money",
       "type": "long",
-      "publish_at": "2026-05-05T14:00:00Z",
+      "publish_at": "2026-05-05T18:00:00Z",
       "stats": {
         "views": 1,
         "avg_view_pct": 0.0,
@@ -571,7 +551,7 @@
       "youtube_id": "9o4vjzWw2dI",
       "title": "We Know More About Mars Than Our Own Ocean Floor",
       "type": "short",
-      "publish_at": "2026-06-02T14:00:00Z",
+      "publish_at": "2026-06-02T18:00:00Z",
       "stats": {
         "views": 5,
         "avg_view_pct": 0.0,
@@ -591,7 +571,7 @@
       "youtube_id": "eoB0zitZlzU",
       "title": "You Spend 26 Years of Your Life Unconscious",
       "type": "short",
-      "publish_at": "2026-06-04T14:00:00Z",
+      "publish_at": "2026-06-04T18:00:00Z",
       "stats": {
         "views": 3,
         "avg_view_pct": 0.0,
@@ -611,7 +591,7 @@
       "youtube_id": "xLSI34s_3nk",
       "title": "The Ocean Floor: Why 80% of Our Planet Remains Completely Unknown",
       "type": "long",
-      "publish_at": "2026-05-12T14:00:00Z",
+      "publish_at": "2026-05-12T18:00:00Z",
       "stats": {
         "views": 2,
         "avg_view_pct": 0.0,
@@ -631,7 +611,7 @@
       "youtube_id": "y7dE8o-5nsU",
       "title": "A Single Ant Colony Spans 6,000 Kilometers — And Has No Leader",
       "type": "short",
-      "publish_at": "2026-06-06T14:00:00Z",
+      "publish_at": "2026-06-06T18:00:00Z",
       "stats": {
         "views": 2,
         "avg_view_pct": 0.0,
@@ -651,7 +631,7 @@
       "youtube_id": "MKiElxZ1IEU",
       "title": "Your Voice Is Already Stolen — You Just Don't Know It Yet",
       "type": "short",
-      "publish_at": "2026-06-08T14:00:00Z",
+      "publish_at": "2026-06-08T18:00:00Z",
       "stats": {
         "views": 0,
         "avg_view_pct": 0.0,
@@ -671,7 +651,7 @@
       "youtube_id": "AkBPRnAsNsw",
       "title": "Loneliness Now Kills More People Than Obesity — And Tech Companies Know It",
       "type": "short",
-      "publish_at": "2026-06-10T14:00:00Z",
+      "publish_at": "2026-06-10T18:00:00Z",
       "stats": {
         "views": 1,
         "avg_view_pct": 0.0,
@@ -689,9 +669,9 @@
     {
       "id": "S02200",
       "youtube_id": "NsMM8kIbyXo",
-      "title": "In 1995 There Were 365 Billionaires. Today: 3,000. Here Is Where the Money Went.",
+      "title": "Top 3,000 Richest People in the World — How Billionaires Tripled Since 1995 #shorts",
       "type": "short",
-      "publish_at": "2026-06-12T14:00:00Z",
+      "publish_at": "2026-06-12T18:00:00Z",
       "stats": {
         "views": 2,
         "avg_view_pct": 0.0,
@@ -711,7 +691,7 @@
       "youtube_id": "D887XGQWIsk",
       "title": "Your Resume Was Rejected by an AI — No Human Ever Read It",
       "type": "short",
-      "publish_at": "2026-06-14T14:00:00Z",
+      "publish_at": "2026-06-14T18:00:00Z",
       "stats": {
         "views": 1,
         "avg_view_pct": 0.0,
@@ -731,7 +711,7 @@
       "youtube_id": "4Df3SrQTbN4",
       "title": "The Sleep Industry: How a $585 Billion Business Profits From Your Exhaustion",
       "type": "long",
-      "publish_at": "2026-05-19T14:00:00Z",
+      "publish_at": "2026-05-19T18:00:00Z",
       "stats": {
         "views": 0,
         "avg_view_pct": 0.0,
@@ -748,70 +728,10 @@
     },
     {
       "id": "S02400",
-      "youtube_id": "slA6RrCdhI8",
+      "youtube_id": "cDxGSLS-DUQ",
       "title": "There Is Plastic Inside Your Heart Right Now",
       "type": "short",
-      "publish_at": "2026-06-22T14:00:00Z",
-      "stats": {
-        "views": 1,
-        "avg_view_pct": 0.0,
-        "avg_view_duration_sec": 0,
-        "likes": 0,
-        "comments": 0,
-        "subs_gained": 0,
-        "ctr_pct": 0.0,
-        "impressions": 0
-      },
-      "retention_grade": "D",
-      "hook_formula": null,
-      "performance_score": 18
-    },
-    {
-      "id": "S02500",
-      "youtube_id": "fbyb2C2RvWg",
-      "title": "Nestlé Paid $524 to Take 27 Million Gallons of Your Water",
-      "type": "short",
-      "publish_at": "2026-06-18T14:00:00Z",
-      "stats": {
-        "views": 1,
-        "avg_view_pct": 0.0,
-        "avg_view_duration_sec": 0,
-        "likes": 0,
-        "comments": 0,
-        "subs_gained": 0,
-        "ctr_pct": 0.0,
-        "impressions": 0
-      },
-      "retention_grade": "D",
-      "hook_formula": null,
-      "performance_score": 18
-    },
-    {
-      "id": "S02600",
-      "youtube_id": "IopufVL9IT8",
-      "title": "The Last Antibiotic Is Failing — And Nobody Is Making a New One",
-      "type": "short",
-      "publish_at": "2026-06-20T14:00:00Z",
-      "stats": {
-        "views": 1,
-        "avg_view_pct": 0.0,
-        "avg_view_duration_sec": 0,
-        "likes": 0,
-        "comments": 0,
-        "subs_gained": 0,
-        "ctr_pct": 0.0,
-        "impressions": 0
-      },
-      "retention_grade": "D",
-      "hook_formula": null,
-      "performance_score": 18
-    },
-    {
-      "id": "S02700",
-      "youtube_id": "acKeFjjb5Gs",
-      "title": "Harvard Scientists Were Paid to Blame Fat — Not Sugar — For Heart Disease",
-      "type": "short",
-      "publish_at": "2026-06-24T14:00:00Z",
+      "publish_at": "2026-06-22T18:00:00Z",
       "stats": {
         "views": 0,
         "avg_view_pct": 0.0,
@@ -827,11 +747,71 @@
       "performance_score": 0
     },
     {
+      "id": "S02500",
+      "youtube_id": "i-0zomFosGQ",
+      "title": "Nestlé Paid $524 to Take 27 Million Gallons of Your Water",
+      "type": "short",
+      "publish_at": "2026-06-18T18:00:00Z",
+      "stats": {
+        "views": 0,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 0
+    },
+    {
+      "id": "S02600",
+      "youtube_id": "dgiVrwio73w",
+      "title": "The Last Antibiotic Is Failing — And Nobody Is Making a New One",
+      "type": "short",
+      "publish_at": "2026-06-20T18:00:00Z",
+      "stats": {
+        "views": 0,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 0
+    },
+    {
+      "id": "S02700",
+      "youtube_id": "egqa26Fcj8o",
+      "title": "Harvard Scientists Were Paid to Blame Fat — Not Sugar — For Heart Disease",
+      "type": "short",
+      "publish_at": "2026-06-24T18:00:00Z",
+      "stats": {
+        "views": 1,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 18
+    },
+    {
       "id": "S02800",
-      "youtube_id": "tKdoXVT6Ubg",
+      "youtube_id": "gIOUboxMLTg",
       "title": "Your Gut Makes 95% of Your Serotonin — Not Your Brain",
       "type": "short",
-      "publish_at": "2026-06-26T14:00:00Z",
+      "publish_at": "2026-06-26T18:00:00Z",
       "stats": {
         "views": 0,
         "avg_view_pct": 0.0,
@@ -848,10 +828,290 @@
     },
     {
       "id": "S02900",
-      "youtube_id": "74FlmXBbueg",
+      "youtube_id": "klhX0H5zc5k",
       "title": "NVIDIA Was Almost Bankrupt. Now It's Worth More Than Germany's Entire Economy.",
       "type": "short",
-      "publish_at": "2026-06-28T14:00:00Z",
+      "publish_at": "2026-06-28T18:00:00Z",
+      "stats": {
+        "views": 0,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 0
+    },
+    {
+      "id": "S02901",
+      "youtube_id": "XgJYcktQ5eY",
+      "title": "There Is 3M Poison in 99% of Your Blood Right Now #shorts #3M #Pollution",
+      "type": "short",
+      "publish_at": "2026-06-30T18:00:00Z",
+      "stats": {
+        "views": 1,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 18
+    },
+    {
+      "id": "S02902",
+      "youtube_id": "0LAhP9dixNI",
+      "title": "Boeing Knew the 737 MAX Could Crash. 346 Died. #shorts #Boeing #Aviation",
+      "type": "short",
+      "publish_at": "2026-07-02T18:00:00Z",
+      "stats": {
+        "views": 5,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 1,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 100
+    },
+    {
+      "id": "L00600",
+      "youtube_id": "vjTQPHBHK9o",
+      "title": "How One Family Killed 500,000 Americans for $13 Billion — The Sackler Empire",
+      "type": "long",
+      "publish_at": "2026-05-26T18:00:00Z",
+      "stats": {
+        "views": 0,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 0
+    },
+    {
+      "id": "S02903",
+      "youtube_id": "PZfniqhUy2I",
+      "title": "147 Million Hacked. Executives Sold $1.78M Before Announcing #shorts #Equifax",
+      "type": "short",
+      "publish_at": "2026-07-04T18:00:00Z",
+      "stats": {
+        "views": 0,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 0
+    },
+    {
+      "id": "S02904",
+      "youtube_id": "M5iNwkHfkxs",
+      "title": "Top 5 Richest Men in the World Doubled Their Wealth While 5 Billion Got Poorer #shorts",
+      "type": "short",
+      "publish_at": "2026-07-06T18:00:00Z",
+      "stats": {
+        "views": 0,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 0
+    },
+    {
+      "id": "L00700",
+      "youtube_id": "L2sQjnwjlUU",
+      "title": "How the Top 10 Richest Men on Earth All Got Rich the Same Way — 130 Year Pattern",
+      "type": "long",
+      "publish_at": "2026-06-02T18:00:00Z",
+      "stats": {
+        "views": 0,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 0
+    },
+    {
+      "id": "S02905",
+      "youtube_id": "lUTy778x0pg",
+      "title": "Ozempic Costs $5 to Make. They Charge Americans $968. #shorts #Ozempic #BigPharma",
+      "type": "short",
+      "publish_at": null,
+      "stats": {
+        "views": 2,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 1,
+        "comments": 1,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 47
+    },
+    {
+      "id": "L00800",
+      "youtube_id": "EfCwO_hEhkw",
+      "title": "Bayer Knew Roundup Caused Cancer for 30 Years — $11 Billion Couldn't Hide It",
+      "type": "long",
+      "publish_at": null,
+      "stats": {
+        "views": 2,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 1,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 35
+    },
+    {
+      "id": "L00900",
+      "youtube_id": "QtxPstTro74",
+      "title": "How Wells Fargo Secretly Opened 3.5 Million Fake Accounts in Customer Names",
+      "type": "long",
+      "publish_at": "2026-06-09T18:00:00Z",
+      "stats": {
+        "views": 0,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 0
+    },
+    {
+      "id": "S02906",
+      "youtube_id": "uMOUT_3UZNM",
+      "title": "Hertz Reported 364 Customers as Thieves — $168M Settlement #shorts #Hertz #Fraud",
+      "type": "short",
+      "publish_at": "2026-07-08T18:00:00Z",
+      "stats": {
+        "views": 0,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 0
+    },
+    {
+      "id": "S02907",
+      "youtube_id": "qEl_PPqh-gc",
+      "title": "AbbVie Filed 132 Patents on One Drug. Stole $50 Billion. #shorts #BigPharma",
+      "type": "short",
+      "publish_at": "2026-07-10T18:00:00Z",
+      "stats": {
+        "views": 0,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 0
+    },
+    {
+      "id": "S02908",
+      "youtube_id": "nFcLrZW_0Y0",
+      "title": "$3 to Make. $300 to Buy. People Died for This. #shorts #BigPharma #Insulin",
+      "type": "short",
+      "publish_at": "2026-07-12T18:00:00Z",
+      "stats": {
+        "views": 0,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 0
+    },
+    {
+      "id": "S02909",
+      "youtube_id": "Rts4ydR2jtY",
+      "title": "$30 Ticket. $90 at Checkout. Nobody Told You. #shorts #Ticketmaster #Monopoly",
+      "type": "short",
+      "publish_at": "2026-07-14T18:00:00Z",
+      "stats": {
+        "views": 0,
+        "avg_view_pct": 0.0,
+        "avg_view_duration_sec": 0,
+        "likes": 0,
+        "comments": 0,
+        "subs_gained": 0,
+        "ctr_pct": 0.0,
+        "impressions": 0
+      },
+      "retention_grade": "D",
+      "hook_formula": null,
+      "performance_score": 0
+    },
+    {
+      "id": "S02910",
+      "youtube_id": "EAgbOTxN7X8",
+      "title": "$1.2 Billion Fine. 500,000 Americans Died. Same Firm. #shorts #McKinsey #Opioids",
+      "type": "short",
+      "publish_at": "2026-07-16T18:00:00Z",
       "stats": {
         "views": 0,
         "avg_view_pct": 0.0,
@@ -872,12 +1132,12 @@
     "score": 100
   },
   "worst_performer": {
-    "id": "S02900",
+    "id": "S02910",
     "score": 0
   },
   "recommendations": [
     "Hook formula B outperforms A by 33% — prioritize formula B",
-    "43 video(s) below 40% retention — consider stronger hooks",
+    "56 video(s) below 40% retention — consider stronger hooks",
     "Shorts average 0% retention — below YouTube average (60%)"
   ],
   "title_rotations": []

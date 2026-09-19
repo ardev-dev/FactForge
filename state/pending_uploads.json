@@ -685,6 +685,42 @@
       "type": "short",
       "scheduled": true,
       "uploaded_at": "2026-05-01T08:13:01Z"
+    },
+    {
+      "id": "S02908",
+      "title": "$3 to Make. $300 to Buy. People Died for This. #shorts #BigPharma #Insulin",
+      "youtube_id": "nFcLrZW_0Y0",
+      "status": "scheduled",
+      "publish_at": "2026-07-12T18:00:00Z",
+      "type": "short",
+      "scheduled": true
+    },
+    {
+      "id": "S02909",
+      "title": "$30 Ticket. $90 at Checkout. Nobody Told You. #shorts #Ticketmaster #Monopoly",
+      "youtube_id": "Rts4ydR2jtY",
+      "status": "scheduled",
+      "publish_at": "2026-07-14T18:00:00Z",
+      "type": "short",
+      "scheduled": true
+    },
+    {
+      "id": "S02910",
+      "title": "$1.2 Billion Fine. 500,000 Americans Died. Same Firm. #shorts #McKinsey #Opioids",
+      "youtube_id": "EAgbOTxN7X8",
+      "status": "scheduled",
+      "publish_at": "2026-07-16T18:00:00Z",
+      "type": "short",
+      "scheduled": true
+    },
+    {
+      "id": "L01100",
+      "title": "11 Million Cars. 40 Times the Legal Limit. They Programmed Every Single One.",
+      "youtube_id": "VokA7sANKOw",
+      "status": "scheduled",
+      "publish_at": "2026-06-16T18:00:00Z",
+      "type": "long",
+      "scheduled": true
     }
   ]
 }

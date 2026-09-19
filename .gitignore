@@ -35,3 +35,5 @@ models/
 *.onnx
 *.bin
 config/social_credentials.json
+config/youtube_credentials.json
+config/youtube_token.json
