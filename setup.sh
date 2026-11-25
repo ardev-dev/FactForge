@@ -8,16 +8,16 @@ echo "━━━━━━━━━━━━━━━━━━━━━━━━�
 echo "  YouTube Automation System — Setup"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 
-# ─── Check Python 3.11 ──────────────────────────
-if ! command -v python3.11 &>/dev/null; then
-  echo "Installing Python 3.11..."
-  brew install python@3.11
+# ─── Check Python 3 ──────────────────────────
+if ! command -v python3 &>/dev/null; then
+  echo "Installing Python 3..."
+  brew install python
 fi
 
 # ─── Create virtual environment ─────────────────
 if [ ! -d "venv" ]; then
   echo "Creating virtual environment..."
-  python3.11 -m venv venv
+  python3 -m venv venv
 fi
 
 source venv/bin/activate

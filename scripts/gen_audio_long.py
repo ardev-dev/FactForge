@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.12
+#!/usr/bin/env python3
 """Generate audio for long-form documentary videos."""
 import json, sys, shutil, logging
 from pathlib import Path
